@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		062021661C8E33FA00A04034 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 062021651C8E33FA00A04034 /* main.m */; };
+		062021691C8E33FA00A04034 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 062021681C8E33FA00A04034 /* AppDelegate.m */; };
+		0620216C1C8E33FA00A04034 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0620216B1C8E33FA00A04034 /* ViewController.m */; };
+		0620216F1C8E33FA00A04034 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0620216D1C8E33FA00A04034 /* Main.storyboard */; };
+		062021721C8E33FA00A04034 /* DC_PC_Viewer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 062021701C8E33FA00A04034 /* DC_PC_Viewer.xcdatamodeld */; };
+		062021741C8E33FA00A04034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062021731C8E33FA00A04034 /* Assets.xcassets */; };
+		062021771C8E33FA00A04034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 062021751C8E33FA00A04034 /* LaunchScreen.storyboard */; };
+		062021821C8E33FA00A04034 /* DC_PC_ViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 062021811C8E33FA00A04034 /* DC_PC_ViewerTests.m */; };
+		0620218D1C8E33FA00A04034 /* DC_PC_ViewerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0620218C1C8E33FA00A04034 /* DC_PC_ViewerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0620217E1C8E33FA00A04034 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 062021591C8E33FA00A04034 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 062021601C8E33FA00A04034;
+			remoteInfo = "DC PC Viewer";
+		};
+		062021891C8E33FA00A04034 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 062021591C8E33FA00A04034 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 062021601C8E33FA00A04034;
+			remoteInfo = "DC PC Viewer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		062021611C8E33FA00A04034 /* DC PC Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DC PC Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		062021651C8E33FA00A04034 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		062021671C8E33FA00A04034 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		062021681C8E33FA00A04034 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0620216A1C8E33FA00A04034 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0620216B1C8E33FA00A04034 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0620216E1C8E33FA00A04034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		062021711C8E33FA00A04034 /* DC_PC_Viewer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DC_PC_Viewer.xcdatamodel; sourceTree = "<group>"; };
+		062021731C8E33FA00A04034 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		062021761C8E33FA00A04034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		062021781C8E33FA00A04034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0620217D1C8E33FA00A04034 /* DC PC ViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DC PC ViewerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		062021811C8E33FA00A04034 /* DC_PC_ViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DC_PC_ViewerTests.m; sourceTree = "<group>"; };
+		062021831C8E33FA00A04034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		062021881C8E33FA00A04034 /* DC PC ViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DC PC ViewerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0620218C1C8E33FA00A04034 /* DC_PC_ViewerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DC_PC_ViewerUITests.m; sourceTree = "<group>"; };
+		0620218E1C8E33FA00A04034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0620215E1C8E33FA00A04034 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0620217A1C8E33FA00A04034 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		062021851C8E33FA00A04034 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		062021581C8E33FA00A04034 = {
+			isa = PBXGroup;
+			children = (
+				062021631C8E33FA00A04034 /* DC PC Viewer */,
+				062021801C8E33FA00A04034 /* DC PC ViewerTests */,
+				0620218B1C8E33FA00A04034 /* DC PC ViewerUITests */,
+				062021621C8E33FA00A04034 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		062021621C8E33FA00A04034 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				062021611C8E33FA00A04034 /* DC PC Viewer.app */,
+				0620217D1C8E33FA00A04034 /* DC PC ViewerTests.xctest */,
+				062021881C8E33FA00A04034 /* DC PC ViewerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		062021631C8E33FA00A04034 /* DC PC Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				062021671C8E33FA00A04034 /* AppDelegate.h */,
+				062021681C8E33FA00A04034 /* AppDelegate.m */,
+				0620216A1C8E33FA00A04034 /* ViewController.h */,
+				0620216B1C8E33FA00A04034 /* ViewController.m */,
+				0620216D1C8E33FA00A04034 /* Main.storyboard */,
+				062021731C8E33FA00A04034 /* Assets.xcassets */,
+				062021751C8E33FA00A04034 /* LaunchScreen.storyboard */,
+				062021781C8E33FA00A04034 /* Info.plist */,
+				062021701C8E33FA00A04034 /* DC_PC_Viewer.xcdatamodeld */,
+				062021641C8E33FA00A04034 /* Supporting Files */,
+			);
+			path = "DC PC Viewer";
+			sourceTree = "<group>";
+		};
+		062021641C8E33FA00A04034 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				062021651C8E33FA00A04034 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		062021801C8E33FA00A04034 /* DC PC ViewerTests */ = {
+			isa = PBXGroup;
+			children = (
+				062021811C8E33FA00A04034 /* DC_PC_ViewerTests.m */,
+				062021831C8E33FA00A04034 /* Info.plist */,
+			);
+			path = "DC PC ViewerTests";
+			sourceTree = "<group>";
+		};
+		0620218B1C8E33FA00A04034 /* DC PC ViewerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0620218C1C8E33FA00A04034 /* DC_PC_ViewerUITests.m */,
+				0620218E1C8E33FA00A04034 /* Info.plist */,
+			);
+			path = "DC PC ViewerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		062021601C8E33FA00A04034 /* DC PC Viewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 062021911C8E33FA00A04034 /* Build configuration list for PBXNativeTarget "DC PC Viewer" */;
+			buildPhases = (
+				0620215D1C8E33FA00A04034 /* Sources */,
+				0620215E1C8E33FA00A04034 /* Frameworks */,
+				0620215F1C8E33FA00A04034 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DC PC Viewer";
+			productName = "DC PC Viewer";
+			productReference = 062021611C8E33FA00A04034 /* DC PC Viewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0620217C1C8E33FA00A04034 /* DC PC ViewerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 062021941C8E33FA00A04034 /* Build configuration list for PBXNativeTarget "DC PC ViewerTests" */;
+			buildPhases = (
+				062021791C8E33FA00A04034 /* Sources */,
+				0620217A1C8E33FA00A04034 /* Frameworks */,
+				0620217B1C8E33FA00A04034 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0620217F1C8E33FA00A04034 /* PBXTargetDependency */,
+			);
+			name = "DC PC ViewerTests";
+			productName = "DC PC ViewerTests";
+			productReference = 0620217D1C8E33FA00A04034 /* DC PC ViewerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		062021871C8E33FA00A04034 /* DC PC ViewerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 062021971C8E33FA00A04034 /* Build configuration list for PBXNativeTarget "DC PC ViewerUITests" */;
+			buildPhases = (
+				062021841C8E33FA00A04034 /* Sources */,
+				062021851C8E33FA00A04034 /* Frameworks */,
+				062021861C8E33FA00A04034 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0620218A1C8E33FA00A04034 /* PBXTargetDependency */,
+			);
+			name = "DC PC ViewerUITests";
+			productName = "DC PC ViewerUITests";
+			productReference = 062021881C8E33FA00A04034 /* DC PC ViewerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		062021591C8E33FA00A04034 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Vin Chopra";
+				TargetAttributes = {
+					062021601C8E33FA00A04034 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					0620217C1C8E33FA00A04034 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 062021601C8E33FA00A04034;
+					};
+					062021871C8E33FA00A04034 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 062021601C8E33FA00A04034;
+					};
+				};
+			};
+			buildConfigurationList = 0620215C1C8E33FA00A04034 /* Build configuration list for PBXProject "DC PC Viewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 062021581C8E33FA00A04034;
+			productRefGroup = 062021621C8E33FA00A04034 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				062021601C8E33FA00A04034 /* DC PC Viewer */,
+				0620217C1C8E33FA00A04034 /* DC PC ViewerTests */,
+				062021871C8E33FA00A04034 /* DC PC ViewerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0620215F1C8E33FA00A04034 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				062021771C8E33FA00A04034 /* LaunchScreen.storyboard in Resources */,
+				062021741C8E33FA00A04034 /* Assets.xcassets in Resources */,
+				0620216F1C8E33FA00A04034 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0620217B1C8E33FA00A04034 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		062021861C8E33FA00A04034 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0620215D1C8E33FA00A04034 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0620216C1C8E33FA00A04034 /* ViewController.m in Sources */,
+				062021691C8E33FA00A04034 /* AppDelegate.m in Sources */,
+				062021661C8E33FA00A04034 /* main.m in Sources */,
+				062021721C8E33FA00A04034 /* DC_PC_Viewer.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		062021791C8E33FA00A04034 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				062021821C8E33FA00A04034 /* DC_PC_ViewerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		062021841C8E33FA00A04034 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0620218D1C8E33FA00A04034 /* DC_PC_ViewerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0620217F1C8E33FA00A04034 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 062021601C8E33FA00A04034 /* DC PC Viewer */;
+			targetProxy = 0620217E1C8E33FA00A04034 /* PBXContainerItemProxy */;
+		};
+		0620218A1C8E33FA00A04034 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 062021601C8E33FA00A04034 /* DC PC Viewer */;
+			targetProxy = 062021891C8E33FA00A04034 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0620216D1C8E33FA00A04034 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0620216E1C8E33FA00A04034 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		062021751C8E33FA00A04034 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				062021761C8E33FA00A04034 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0620218F1C8E33FA00A04034 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		062021901C8E33FA00A04034 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		062021921C8E33FA00A04034 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "DC PC Viewer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fujitsu.ten.com.DC-PC-Viewer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		062021931C8E33FA00A04034 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "DC PC Viewer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fujitsu.ten.com.DC-PC-Viewer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		062021951C8E33FA00A04034 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "DC PC ViewerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fujitsu.ten.com.DC-PC-ViewerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DC PC Viewer.app/DC PC Viewer";
+			};
+			name = Debug;
+		};
+		062021961C8E33FA00A04034 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "DC PC ViewerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fujitsu.ten.com.DC-PC-ViewerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DC PC Viewer.app/DC PC Viewer";
+			};
+			name = Release;
+		};
+		062021981C8E33FA00A04034 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "DC PC ViewerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fujitsu.ten.com.DC-PC-ViewerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "DC PC Viewer";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		062021991C8E33FA00A04034 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "DC PC ViewerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fujitsu.ten.com.DC-PC-ViewerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "DC PC Viewer";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0620215C1C8E33FA00A04034 /* Build configuration list for PBXProject "DC PC Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0620218F1C8E33FA00A04034 /* Debug */,
+				062021901C8E33FA00A04034 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		062021911C8E33FA00A04034 /* Build configuration list for PBXNativeTarget "DC PC Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				062021921C8E33FA00A04034 /* Debug */,
+				062021931C8E33FA00A04034 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		062021941C8E33FA00A04034 /* Build configuration list for PBXNativeTarget "DC PC ViewerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				062021951C8E33FA00A04034 /* Debug */,
+				062021961C8E33FA00A04034 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		062021971C8E33FA00A04034 /* Build configuration list for PBXNativeTarget "DC PC ViewerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				062021981C8E33FA00A04034 /* Debug */,
+				062021991C8E33FA00A04034 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		062021701C8E33FA00A04034 /* DC_PC_Viewer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				062021711C8E33FA00A04034 /* DC_PC_Viewer.xcdatamodel */,
+			);
+			currentVersion = 062021711C8E33FA00A04034 /* DC_PC_Viewer.xcdatamodel */;
+			path = DC_PC_Viewer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 062021591C8E33FA00A04034 /* Project object */;
+}
