@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		062021661C8E33FA00A04034 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 062021651C8E33FA00A04034 /* main.m */; };
 		062021691C8E33FA00A04034 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 062021681C8E33FA00A04034 /* AppDelegate.m */; };
-		0620216C1C8E33FA00A04034 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0620216B1C8E33FA00A04034 /* ViewController.m */; };
 		0620216F1C8E33FA00A04034 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0620216D1C8E33FA00A04034 /* Main.storyboard */; };
 		062021721C8E33FA00A04034 /* DC_PC_Viewer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 062021701C8E33FA00A04034 /* DC_PC_Viewer.xcdatamodeld */; };
 		062021741C8E33FA00A04034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062021731C8E33FA00A04034 /* Assets.xcassets */; };
 		062021771C8E33FA00A04034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 062021751C8E33FA00A04034 /* LaunchScreen.storyboard */; };
 		062021821C8E33FA00A04034 /* DC_PC_ViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 062021811C8E33FA00A04034 /* DC_PC_ViewerTests.m */; };
 		0620218D1C8E33FA00A04034 /* DC_PC_ViewerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0620218C1C8E33FA00A04034 /* DC_PC_ViewerUITests.m */; };
+		0620219D1C8E368100A04034 /* AllVideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0620219B1C8E368100A04034 /* AllVideosViewController.m */; };
+		0620219E1C8E368100A04034 /* AllVideosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0620219C1C8E368100A04034 /* AllVideosViewController.xib */; };
+		062021A31C8E36C400A04034 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 062021A11C8E36C400A04034 /* EventsViewController.m */; };
+		062021A41C8E36C400A04034 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062021A21C8E36C400A04034 /* EventsViewController.xib */; };
+		06975AB01C8E5F5400139433 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06975AAF1C8E5F5400139433 /* QuartzCore.framework */; };
+		06975AB51C8E682B00139433 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06975AB41C8E682B00139433 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +45,6 @@
 		062021651C8E33FA00A04034 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		062021671C8E33FA00A04034 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		062021681C8E33FA00A04034 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0620216A1C8E33FA00A04034 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0620216B1C8E33FA00A04034 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0620216E1C8E33FA00A04034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		062021711C8E33FA00A04034 /* DC_PC_Viewer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DC_PC_Viewer.xcdatamodel; sourceTree = "<group>"; };
 		062021731C8E33FA00A04034 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +56,15 @@
 		062021881C8E33FA00A04034 /* DC PC ViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DC PC ViewerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0620218C1C8E33FA00A04034 /* DC_PC_ViewerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DC_PC_ViewerUITests.m; sourceTree = "<group>"; };
 		0620218E1C8E33FA00A04034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0620219A1C8E368100A04034 /* AllVideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllVideosViewController.h; sourceTree = "<group>"; };
+		0620219B1C8E368100A04034 /* AllVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllVideosViewController.m; sourceTree = "<group>"; };
+		0620219C1C8E368100A04034 /* AllVideosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllVideosViewController.xib; sourceTree = "<group>"; };
+		062021A01C8E36C400A04034 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		062021A11C8E36C400A04034 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		062021A21C8E36C400A04034 /* EventsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
+		06975AAF1C8E5F5400139433 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		06975AB31C8E682B00139433 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		06975AB41C8E682B00139433 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06975AB01C8E5F5400139433 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +100,8 @@
 				062021801C8E33FA00A04034 /* DC PC ViewerTests */,
 				0620218B1C8E33FA00A04034 /* DC PC ViewerUITests */,
 				062021621C8E33FA00A04034 /* Products */,
+				06975AB21C8E682B00139433 /* SWRevealViewController */,
+				06975AB11C8E657200139433 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,10 +118,9 @@
 		062021631C8E33FA00A04034 /* DC PC Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				0620219F1C8E369500A04034 /* ViewControllers */,
 				062021671C8E33FA00A04034 /* AppDelegate.h */,
 				062021681C8E33FA00A04034 /* AppDelegate.m */,
-				0620216A1C8E33FA00A04034 /* ViewController.h */,
-				0620216B1C8E33FA00A04034 /* ViewController.m */,
 				0620216D1C8E33FA00A04034 /* Main.storyboard */,
 				062021731C8E33FA00A04034 /* Assets.xcassets */,
 				062021751C8E33FA00A04034 /* LaunchScreen.storyboard */,
@@ -141,6 +155,36 @@
 				0620218E1C8E33FA00A04034 /* Info.plist */,
 			);
 			path = "DC PC ViewerUITests";
+			sourceTree = "<group>";
+		};
+		0620219F1C8E369500A04034 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0620219A1C8E368100A04034 /* AllVideosViewController.h */,
+				0620219B1C8E368100A04034 /* AllVideosViewController.m */,
+				0620219C1C8E368100A04034 /* AllVideosViewController.xib */,
+				062021A01C8E36C400A04034 /* EventsViewController.h */,
+				062021A11C8E36C400A04034 /* EventsViewController.m */,
+				062021A21C8E36C400A04034 /* EventsViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		06975AB11C8E657200139433 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06975AAF1C8E5F5400139433 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		06975AB21C8E682B00139433 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				06975AB31C8E682B00139433 /* SWRevealViewController.h */,
+				06975AB41C8E682B00139433 /* SWRevealViewController.m */,
+			);
+			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +254,7 @@
 				TargetAttributes = {
 					062021601C8E33FA00A04034 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 363AR2C8T6;
 					};
 					0620217C1C8E33FA00A04034 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -247,7 +292,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				062021771C8E33FA00A04034 /* LaunchScreen.storyboard in Resources */,
+				062021A41C8E36C400A04034 /* EventsViewController.xib in Resources */,
 				062021741C8E33FA00A04034 /* Assets.xcassets in Resources */,
+				0620219E1C8E368100A04034 /* AllVideosViewController.xib in Resources */,
 				0620216F1C8E33FA00A04034 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,10 +320,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0620216C1C8E33FA00A04034 /* ViewController.m in Sources */,
 				062021691C8E33FA00A04034 /* AppDelegate.m in Sources */,
+				062021A31C8E36C400A04034 /* EventsViewController.m in Sources */,
 				062021661C8E33FA00A04034 /* main.m in Sources */,
+				0620219D1C8E368100A04034 /* AllVideosViewController.m in Sources */,
 				062021721C8E33FA00A04034 /* DC_PC_Viewer.xcdatamodeld in Sources */,
+				06975AB51C8E682B00139433 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,10 +464,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "DC PC Viewer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fujitsu.ten.com.DC-PC-Viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -426,10 +478,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "DC PC Viewer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fujitsu.ten.com.DC-PC-Viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -500,6 +555,7 @@
 				062021931C8E33FA00A04034 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		062021941C8E33FA00A04034 /* Build configuration list for PBXNativeTarget "DC PC ViewerTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +564,7 @@
 				062021961C8E33FA00A04034 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		062021971C8E33FA00A04034 /* Build configuration list for PBXNativeTarget "DC PC ViewerUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +573,7 @@
 				062021991C8E33FA00A04034 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
