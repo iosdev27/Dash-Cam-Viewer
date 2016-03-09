@@ -758,6 +758,26 @@ const int FrontViewPositionNone = 0xff;
     // we store at this point the view's user interaction state as we may temporarily disable it
     // and resume it back to the previous state, it is possible to override this behaviour by
     // intercepting it on the panGestureBegan and panGestureEnded delegates
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    [reachability startNotifier];
+    
+    NetworkStatus status = [reachability currentReachabilityStatus];
+    
+    if(status == NotReachable)
+    {
+        //No internet
+        NSLog(@"No internet.");
+    }
+    else if (status == ReachableViaWiFi)
+    {
+        //WiFi
+        NSLog(@"Wifi");
+    }
+    else if (status == ReachableViaWWAN)
+    {
+        //3G
+        NSLog(@"3G");
+    }
     
     UIAlertController * alert=   [UIAlertController
                                   alertControllerWithTitle:@"Connect to Dash Camera by WiFi"
@@ -771,9 +791,7 @@ const int FrontViewPositionNone = 0xff;
                          {
                              NSURL*url=[NSURL URLWithString:@"prefs:root=WIFI"];
                              [[UIApplication sharedApplication] openURL:url];
-//                             if (&UIApplicationOpenSettingsURLString != NULL) {
-//                                 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];
-//                             }
+
                              [alert dismissViewControllerAnimated:YES completion:nil];
                              
                          }];

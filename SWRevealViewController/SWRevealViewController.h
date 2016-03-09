@@ -138,6 +138,7 @@
 
 
 #import <UIKit/UIKit.h>
+#import "Reachability.h"
 
 @class SWRevealViewController;
 @protocol SWRevealViewControllerDelegate;

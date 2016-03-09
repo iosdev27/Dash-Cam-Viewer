@@ -91,10 +91,11 @@
                                     <barButtonItem title="Back" id="u1C-3i-fjd"/>
                                     <barButtonItem width="88" style="plain" systemItem="fixedSpace" id="SdE-mm-pTn"/>
                                     <barButtonItem title="Dash Cam" id="NRN-vI-Rt7"/>
-                                    <barButtonItem width="37" style="plain" systemItem="fixedSpace" id="2qW-it-qq1"/>
-                                    <barButtonItem image="BTN_Header_Gallery_NML.png" id="cgk-Np-sxZ"/>
+                                    <barButtonItem width="55" style="plain" systemItem="fixedSpace" id="2qW-it-qq1"/>
+                                    <barButtonItem image="BTN_Header_Gallery2_NML.png" id="cgk-Np-sxZ"/>
                                     <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="r4v-Hp-b0h"/>
-                                    <barButtonItem image="menu.png" id="Foa-pk-4qJ"/>
+                                    <barButtonItem image="BTN_Header_Hamburger2_NML.png" id="Foa-pk-4qJ"/>
+                                    <barButtonItem style="plain" systemItem="fixedSpace" id="Y2e-EO-pYc"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -156,7 +157,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BTN_Header_Gallery_NML.png" width="33" height="34"/>
+        <image name="BTN_Header_Gallery2_NML.png" width="20" height="20"/>
+        <image name="BTN_Header_Hamburger2_NML.png" width="20" height="20"/>
         <image name="menu.png" width="28" height="20"/>
     </resources>
 </document>
