@@ -7,6 +7,7 @@
 //
 
 #import "AllVideosViewController.h"
+#import "SWRevealViewController.h"
 
 @interface AllVideosViewController ()
 
@@ -18,6 +19,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    SWRevealViewController *revealViewController = self.revealViewController;
+    
+//    UIView *menuButtonView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 63, 33)];
+//    [self.navigationItem setRightBarButtonItem:self.menuBarButtonItem];
+    
+    if (revealViewController) {
+        [self.menuBarButtonItem setTarget:self.revealViewController];
+//        [self.menuBarButtonItem setAction:@selector(revealToggle:)];
+        [self.menuBarButtonItem setAction:@selector(rightRevealToggle:)];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
     
 }
 

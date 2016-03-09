@@ -21,6 +21,8 @@
 		062021A41C8E36C400A04034 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062021A21C8E36C400A04034 /* EventsViewController.xib */; };
 		06975AB01C8E5F5400139433 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06975AAF1C8E5F5400139433 /* QuartzCore.framework */; };
 		06975AB51C8E682B00139433 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06975AB41C8E682B00139433 /* SWRevealViewController.m */; };
+		06975AB91C8F914900139433 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 06975AB71C8F914900139433 /* menu.png */; };
+		06975ABA1C8F914900139433 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06975AB81C8F914900139433 /* menu@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		06975AAF1C8E5F5400139433 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		06975AB31C8E682B00139433 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		06975AB41C8E682B00139433 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		06975AB71C8F914900139433 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		06975AB81C8F914900139433 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 		062021631C8E33FA00A04034 /* DC PC Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				06975AB61C8F913300139433 /* Assets */,
 				0620219F1C8E369500A04034 /* ViewControllers */,
 				062021671C8E33FA00A04034 /* AppDelegate.h */,
 				062021681C8E33FA00A04034 /* AppDelegate.m */,
@@ -185,6 +190,15 @@
 				06975AB41C8E682B00139433 /* SWRevealViewController.m */,
 			);
 			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		06975AB61C8F913300139433 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				06975AB71C8F914900139433 /* menu.png */,
+				06975AB81C8F914900139433 /* menu@2x.png */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +306,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				062021771C8E33FA00A04034 /* LaunchScreen.storyboard in Resources */,
+				06975ABA1C8F914900139433 /* menu@2x.png in Resources */,
 				062021A41C8E36C400A04034 /* EventsViewController.xib in Resources */,
+				06975AB91C8F914900139433 /* menu.png in Resources */,
 				062021741C8E33FA00A04034 /* Assets.xcassets in Resources */,
 				0620219E1C8E368100A04034 /* AllVideosViewController.xib in Resources */,
 				0620216F1C8E33FA00A04034 /* Main.storyboard in Resources */,

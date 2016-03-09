@@ -11,5 +11,8 @@
 
 @interface AllVideosViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIToolbar *navigationToolBar;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButtonItem;
+
 
 @end
