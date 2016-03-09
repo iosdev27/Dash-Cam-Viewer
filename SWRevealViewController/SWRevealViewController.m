@@ -27,6 +27,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 #import "SWRevealViewController.h"
+@import SystemConfiguration.CaptiveNetwork;
 
 
 #pragma mark - StatusBar Helper Function
@@ -758,6 +759,9 @@ const int FrontViewPositionNone = 0xff;
     // we store at this point the view's user interaction state as we may temporarily disable it
     // and resume it back to the previous state, it is possible to override this behaviour by
     // intercepting it on the panGestureBegan and panGestureEnded delegates
+    
+    BOOL hasWifi = NO;
+    BOOL ssidIsDashCam = NO;
     Reachability *reachability = [Reachability reachabilityForInternetConnection];
     [reachability startNotifier];
     
@@ -772,6 +776,14 @@ const int FrontViewPositionNone = 0xff;
     {
         //WiFi
         NSLog(@"Wifi");
+        hasWifi = YES;
+        NSDictionary *dict = [self fetchSSIDInfo];
+        
+        NSString *ssid = [dict objectForKey:@"SSID"];
+        NSLog(@"ssid is: %@", ssid);
+        if ([ssid isEqualToString:@"ron_3"]) {
+            ssidIsDashCam = YES;
+        }
     }
     else if (status == ReachableViaWWAN)
     {
@@ -779,39 +791,65 @@ const int FrontViewPositionNone = 0xff;
         NSLog(@"3G");
     }
     
-    UIAlertController * alert=   [UIAlertController
-                                  alertControllerWithTitle:@"Connect to Dash Camera by WiFi"
-                                  message:@"To use this app you need to be connected to the Dash Camera by Wifi."
-                                  preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction* ok = [UIAlertAction
-                         actionWithTitle:@"OK"
-                         style:UIAlertActionStyleDefault
-                         handler:^(UIAlertAction * action)
-                         {
-                             NSURL*url=[NSURL URLWithString:@"prefs:root=WIFI"];
-                             [[UIApplication sharedApplication] openURL:url];
-
-                             [alert dismissViewControllerAnimated:YES completion:nil];
-                             
-                         }];
-    UIAlertAction* cancel = [UIAlertAction
-                             actionWithTitle:@"Cancel"
+    if (!ssidIsDashCam) {
+        UIAlertController * alert=   [UIAlertController
+                                      alertControllerWithTitle:@"Connect to Dash Camera by WiFi"
+                                      message:@"To use this app you need to be connected to the Dash Camera by Wifi."
+                                      preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* ok = [UIAlertAction
+                             actionWithTitle:@"OK"
                              style:UIAlertActionStyleDefault
                              handler:^(UIAlertAction * action)
                              {
+                                 NSURL*url=[NSURL URLWithString:@"prefs:root=WIFI"];
+                                 [[UIApplication sharedApplication] openURL:url];
+                                 
                                  [alert dismissViewControllerAnimated:YES completion:nil];
                                  
                              }];
+        UIAlertAction* cancel = [UIAlertAction
+                                 actionWithTitle:@"Cancel"
+                                 style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction * action)
+                                 {
+                                     [alert dismissViewControllerAnimated:YES completion:nil];
+                                     
+                                 }];
+        
+        [alert addAction:ok];
+        [alert addAction:cancel];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+        
+        _userInteractionStore = _contentView.userInteractionEnabled;
+    }
     
-    [alert addAction:ok];
-    [alert addAction:cancel];
     
-    [self presentViewController:alert animated:YES completion:nil];
     
-    _userInteractionStore = _contentView.userInteractionEnabled;
+    
 }
 
+/** Returns first non-empty SSID network info dictionary.
+ *  @see CNCopyCurrentNetworkInfo */
+- (NSDictionary *)fetchSSIDInfo
+{
+    NSArray *interfaceNames = CFBridgingRelease(CNCopySupportedInterfaces());
+    NSLog(@"%s: Supported interfaces: %@", __func__, interfaceNames);
+    
+    NSDictionary *SSIDInfo;
+    for (NSString *interfaceName in interfaceNames) {
+        SSIDInfo = CFBridgingRelease(
+                                     CNCopyCurrentNetworkInfo((__bridge CFStringRef)interfaceName));
+        NSLog(@"%s: %@ => %@", __func__, interfaceName, SSIDInfo);
+        
+        BOOL isNotEmpty = (SSIDInfo.count > 0);
+        if (isNotEmpty) {
+            break;
+        }
+    }
+    return SSIDInfo;
+}
 
 - (NSUInteger)supportedInterfaceOrientations
 {
