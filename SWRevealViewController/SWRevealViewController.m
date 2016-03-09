@@ -769,6 +769,11 @@ const int FrontViewPositionNone = 0xff;
                          style:UIAlertActionStyleDefault
                          handler:^(UIAlertAction * action)
                          {
+                             NSURL*url=[NSURL URLWithString:@"prefs:root=WIFI"];
+                             [[UIApplication sharedApplication] openURL:url];
+//                             if (&UIApplicationOpenSettingsURLString != NULL) {
+//                                 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];
+//                             }
                              [alert dismissViewControllerAnimated:YES completion:nil];
                              
                          }];
