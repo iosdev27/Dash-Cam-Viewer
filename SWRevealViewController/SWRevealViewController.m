@@ -760,8 +760,8 @@ const int FrontViewPositionNone = 0xff;
     // intercepting it on the panGestureBegan and panGestureEnded delegates
     
     UIAlertController * alert=   [UIAlertController
-                                  alertControllerWithTitle:@"Info"
-                                  message:@"Connect to Dash Camera by WiFi"
+                                  alertControllerWithTitle:@"Connect to Dash Camera by WiFi"
+                                  message:@"To use this app you need to be connected to the Dash Camera by Wifi."
                                   preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* ok = [UIAlertAction
