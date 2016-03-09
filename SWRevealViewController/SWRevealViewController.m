@@ -758,6 +758,34 @@ const int FrontViewPositionNone = 0xff;
     // we store at this point the view's user interaction state as we may temporarily disable it
     // and resume it back to the previous state, it is possible to override this behaviour by
     // intercepting it on the panGestureBegan and panGestureEnded delegates
+    
+    UIAlertController * alert=   [UIAlertController
+                                  alertControllerWithTitle:@"Info"
+                                  message:@"Connect to Dash Camera by WiFi"
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* ok = [UIAlertAction
+                         actionWithTitle:@"OK"
+                         style:UIAlertActionStyleDefault
+                         handler:^(UIAlertAction * action)
+                         {
+                             [alert dismissViewControllerAnimated:YES completion:nil];
+                             
+                         }];
+    UIAlertAction* cancel = [UIAlertAction
+                             actionWithTitle:@"Cancel"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 [alert dismissViewControllerAnimated:YES completion:nil];
+                                 
+                             }];
+    
+    [alert addAction:ok];
+    [alert addAction:cancel];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
     _userInteractionStore = _contentView.userInteractionEnabled;
 }
 
