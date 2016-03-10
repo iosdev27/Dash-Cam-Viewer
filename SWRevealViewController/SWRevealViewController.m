@@ -25,8 +25,8 @@
 */
 
 #import <QuartzCore/QuartzCore.h>
-
 #import "SWRevealViewController.h"
+#import "SDCardConnectionViewController.h"
 @import SystemConfiguration.CaptiveNetwork;
 
 
@@ -824,10 +824,11 @@ const int FrontViewPositionNone = 0xff;
         
         _userInteractionStore = _contentView.userInteractionEnabled;
     }
-    
-    
-    
-    
+    if (ssidIsDashCam) {
+        NSLog(@"");
+        SDCardConnectionViewController *connVC = [[SDCardConnectionViewController alloc] init];
+        [self.navigationController pushViewController:connVC animated:YES];
+    }
 }
 
 /** Returns first non-empty SSID network info dictionary.
