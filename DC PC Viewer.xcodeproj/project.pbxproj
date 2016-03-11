@@ -16,9 +16,7 @@
 		062021821C8E33FA00A04034 /* DC_PC_ViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 062021811C8E33FA00A04034 /* DC_PC_ViewerTests.m */; };
 		0620218D1C8E33FA00A04034 /* DC_PC_ViewerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0620218C1C8E33FA00A04034 /* DC_PC_ViewerUITests.m */; };
 		0620219D1C8E368100A04034 /* AllVideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0620219B1C8E368100A04034 /* AllVideosViewController.m */; };
-		0620219E1C8E368100A04034 /* AllVideosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0620219C1C8E368100A04034 /* AllVideosViewController.xib */; };
 		062021A31C8E36C400A04034 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 062021A11C8E36C400A04034 /* EventsViewController.m */; };
-		062021A41C8E36C400A04034 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062021A21C8E36C400A04034 /* EventsViewController.xib */; };
 		06975AB01C8E5F5400139433 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06975AAF1C8E5F5400139433 /* QuartzCore.framework */; };
 		06975AB51C8E682B00139433 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06975AB41C8E682B00139433 /* SWRevealViewController.m */; };
 		06975AB91C8F914900139433 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 06975AB71C8F914900139433 /* menu.png */; };
@@ -46,7 +44,6 @@
 		06C79D651C90A2DD0043926E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C79D641C90A2DD0043926E /* SystemConfiguration.framework */; };
 		06C79D6A1C90AA170043926E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79D691C90AA170043926E /* Reachability.m */; };
 		06C79D6E1C90D86A0043926E /* SDCardConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79D6C1C90D86A0043926E /* SDCardConnectionViewController.m */; };
-		06C79D6F1C90D86A0043926E /* SDCardConnectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06C79D6D1C90D86A0043926E /* SDCardConnectionViewController.xib */; };
 		06C79D9C1C90EF670043926E /* All Videos Event gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = 06C79D711C90EF670043926E /* All Videos Event gallery.png */; };
 		06C79D9D1C90EF670043926E /* All Videos New Event gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = 06C79D721C90EF670043926E /* All Videos New Event gallery.png */; };
 		06C79D9E1C90EF670043926E /* All Videos No Event gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = 06C79D731C90EF670043926E /* All Videos No Event gallery.png */; };
@@ -125,6 +122,9 @@
 		06C79E321C910C1B0043926E /* DGActivityIndicatorTripleRingsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79E0D1C910C1B0043926E /* DGActivityIndicatorTripleRingsAnimation.m */; };
 		06C79E331C910C1B0043926E /* DGActivityIndicatorTwoDotsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79E0F1C910C1B0043926E /* DGActivityIndicatorTwoDotsAnimation.m */; };
 		06C79E341C910C1B0043926E /* DGActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79E121C910C1B0043926E /* DGActivityIndicatorView.m */; };
+		06C79E3A1C91F8190043926E /* DCNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79E391C91F8190043926E /* DCNavigationViewController.m */; };
+		06C79E3C1C9246AE0043926E /* full-screen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06C79E3B1C9246AE0043926E /* full-screen@2x.png */; };
+		06C79E3E1C9249BC0043926E /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06C79E3D1C9249BC0043926E /* list@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,10 +162,8 @@
 		0620218E1C8E33FA00A04034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0620219A1C8E368100A04034 /* AllVideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllVideosViewController.h; sourceTree = "<group>"; };
 		0620219B1C8E368100A04034 /* AllVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllVideosViewController.m; sourceTree = "<group>"; };
-		0620219C1C8E368100A04034 /* AllVideosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllVideosViewController.xib; sourceTree = "<group>"; };
 		062021A01C8E36C400A04034 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		062021A11C8E36C400A04034 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
-		062021A21C8E36C400A04034 /* EventsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
 		06975AAF1C8E5F5400139433 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		06975AB31C8E682B00139433 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		06975AB41C8E682B00139433 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 		06C79D691C90AA170043926E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		06C79D6B1C90D86A0043926E /* SDCardConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCardConnectionViewController.h; sourceTree = "<group>"; };
 		06C79D6C1C90D86A0043926E /* SDCardConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCardConnectionViewController.m; sourceTree = "<group>"; };
-		06C79D6D1C90D86A0043926E /* SDCardConnectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDCardConnectionViewController.xib; sourceTree = "<group>"; };
 		06C79D711C90EF670043926E /* All Videos Event gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "All Videos Event gallery.png"; sourceTree = "<group>"; };
 		06C79D721C90EF670043926E /* All Videos New Event gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "All Videos New Event gallery.png"; sourceTree = "<group>"; };
 		06C79D731C90EF670043926E /* All Videos No Event gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "All Videos No Event gallery.png"; sourceTree = "<group>"; };
@@ -310,6 +307,10 @@
 		06C79E101C910C1B0043926E /* DGActivityIndicatorAnimationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGActivityIndicatorAnimationProtocol.h; sourceTree = "<group>"; };
 		06C79E111C910C1B0043926E /* DGActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGActivityIndicatorView.h; sourceTree = "<group>"; };
 		06C79E121C910C1B0043926E /* DGActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGActivityIndicatorView.m; sourceTree = "<group>"; };
+		06C79E381C91F8190043926E /* DCNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNavigationViewController.h; sourceTree = "<group>"; };
+		06C79E391C91F8190043926E /* DCNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNavigationViewController.m; sourceTree = "<group>"; };
+		06C79E3B1C9246AE0043926E /* full-screen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "full-screen@2x.png"; sourceTree = "<group>"; };
+		06C79E3D1C9249BC0043926E /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,13 +410,12 @@
 			children = (
 				0620219A1C8E368100A04034 /* AllVideosViewController.h */,
 				0620219B1C8E368100A04034 /* AllVideosViewController.m */,
-				0620219C1C8E368100A04034 /* AllVideosViewController.xib */,
 				062021A01C8E36C400A04034 /* EventsViewController.h */,
 				062021A11C8E36C400A04034 /* EventsViewController.m */,
-				062021A21C8E36C400A04034 /* EventsViewController.xib */,
 				06C79D6B1C90D86A0043926E /* SDCardConnectionViewController.h */,
 				06C79D6C1C90D86A0043926E /* SDCardConnectionViewController.m */,
-				06C79D6D1C90D86A0043926E /* SDCardConnectionViewController.xib */,
+				06C79E381C91F8190043926E /* DCNavigationViewController.h */,
+				06C79E391C91F8190043926E /* DCNavigationViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -506,6 +506,8 @@
 		06C79D701C90EF670043926E /* screen images */ = {
 			isa = PBXGroup;
 			children = (
+				06C79E3D1C9249BC0043926E /* list@2x.png */,
+				06C79E3B1C9246AE0043926E /* full-screen@2x.png */,
 				06C79DC71C90F19E0043926E /* full-screen_half.png */,
 				06C79D711C90EF670043926E /* All Videos Event gallery.png */,
 				06C79D721C90EF670043926E /* All Videos New Event gallery.png */,
@@ -745,6 +747,7 @@
 				06C79D5B1C90A1400043926E /* IMG_List-Other-Icon.png in Resources */,
 				06C79DBE1C90EF670043926E /* Variation 1 ver22.png in Resources */,
 				06C79DC21C90EF670043926E /* Video Play Screen no lock.png in Resources */,
+				06C79E3C1C9246AE0043926E /* full-screen@2x.png in Resources */,
 				06C79DAA1C90EF670043926E /* Expanded gallery View normal.png in Resources */,
 				06C79D5F1C90A1400043926E /* List_NML.png in Resources */,
 				06C79DB11C90EF670043926E /* Expanded List PG 2 Seen.png in Resources */,
@@ -773,7 +776,6 @@
 				06C79D511C90A1400043926E /* BTN_Header_Gallery_NML.png in Resources */,
 				06C79DB21C90EF670043926E /* Expanded List PG 3.png in Resources */,
 				06C79D561C90A1400043926E /* BTN_Tab_Event_NML.png in Resources */,
-				062021A41C8E36C400A04034 /* EventsViewController.xib in Resources */,
 				06C79D601C90A1400043926E /* Part_Tab_Indicator_.png in Resources */,
 				06C79D9F1C90EF670043926E /* All Videos No Event.png in Resources */,
 				06C79D5D1C90A1400043926E /* List-Header-Base.png in Resources */,
@@ -793,7 +795,6 @@
 				06C79DC11C90EF670043926E /* Video Play Saved.png in Resources */,
 				06C79DA11C90EF670043926E /* All Videos old event.png in Resources */,
 				06C79D551C90A1400043926E /* BTN_Tab_AllVideos_SLC.png in Resources */,
-				06C79D6F1C90D86A0043926E /* SDCardConnectionViewController.xib in Resources */,
 				06C79DB71C90EF670043926E /* Hamburger.png in Resources */,
 				06C79DB01C90EF670043926E /* Expanded List PG 2 normal.png in Resources */,
 				062021741C8E33FA00A04034 /* Assets.xcassets in Resources */,
@@ -803,7 +804,6 @@
 				06C79DAF1C90EF670043926E /* Expanded List PG 2 new.png in Resources */,
 				06C79D5E1C90A1400043926E /* List_New.png in Resources */,
 				06C79DC41C90EF670043926E /* Video Play Screen.png in Resources */,
-				0620219E1C8E368100A04034 /* AllVideosViewController.xib in Resources */,
 				06C79D521C90A1400043926E /* BTN_Header_Hamburger2_NML.png in Resources */,
 				06C79D591C90A1400043926E /* IMG_List-Header-Icon.png in Resources */,
 				06C79DB51C90EF670043926E /* Gallery View.png in Resources */,
@@ -812,6 +812,7 @@
 				06C79DA21C90EF670043926E /* All Videos.png in Resources */,
 				06C79DA51C90EF670043926E /* Events old.png in Resources */,
 				06C79DAE1C90EF670043926E /* Expanded List no event.png in Resources */,
+				06C79E3E1C9249BC0043926E /* list@2x.png in Resources */,
 				06C79D611C90A1400043926E /* Clased Accordian.psd in Resources */,
 				0620216F1C8E33FA00A04034 /* Main.storyboard in Resources */,
 			);
@@ -843,6 +844,7 @@
 				06C79E181C910C1B0043926E /* DGActivityIndicatorBallGridPulseAnimation.m in Sources */,
 				06C79E2C1C910C1B0043926E /* DGActivityIndicatorRotatingSandglassAnimation.m in Sources */,
 				06C79E161C910C1B0043926E /* DGActivityIndicatorBallClipRotatePulseAnimation.m in Sources */,
+				06C79E3A1C91F8190043926E /* DCNavigationViewController.m in Sources */,
 				06C79E1E1C910C1B0043926E /* DGActivityIndicatorBallScaleRippleAnimation.m in Sources */,
 				06C79E2A1C910C1B0043926E /* DGActivityIndicatorLineScalePulseOutRapidAnimation.m in Sources */,
 				06C79E271C910C1B0043926E /* DGActivityIndicatorLineScaleAnimation.m in Sources */,

@@ -72,6 +72,7 @@ static CGFloat statusBarAdjustment( UIView* view )
 
 @implementation SWRevealView
 
+static int sdcardconnectionappear = 0;
 
 static CGFloat scaledValue( CGFloat v1, CGFloat min2, CGFloat max2, CGFloat min1, CGFloat max1)
 {
@@ -753,12 +754,12 @@ const int FrontViewPositionNone = 0xff;
     // of this method, you can load yourself the views explicitly on your overriden method.
     // However we discourage it as an app following the MVC principles should never need to do so
         
-//  [_frontViewController view];
-//  [_rearViewController view];
+  [_frontViewController view];
+  [_rearViewController view];
 
-    // we store at this point the view's user interaction state as we may temporarily disable it
-    // and resume it back to the previous state, it is possible to override this behaviour by
-    // intercepting it on the panGestureBegan and panGestureEnded delegates
+//     we store at this point the view's user interaction state as we may temporarily disable it
+//     and resume it back to the previous state, it is possible to override this behaviour by
+//     intercepting it on the panGestureBegan and panGestureEnded delegates
     
     BOOL hasWifi = NO;
     BOOL ssidIsDashCam = NO;
@@ -825,9 +826,15 @@ const int FrontViewPositionNone = 0xff;
         _userInteractionStore = _contentView.userInteractionEnabled;
     }
     if (ssidIsDashCam) {
-        NSLog(@"");
-        SDCardConnectionViewController *connVC = [[SDCardConnectionViewController alloc] init];
-        [self.navigationController pushViewController:connVC animated:YES];
+        if (sdcardconnectionappear < 1) {
+            SDCardConnectionViewController *connVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SDCardConnectionVCID"];
+            [self presentViewController:connVC animated:YES completion:NULL];
+            sdcardconnectionappear += 1;
+        }
+//        SDCardConnectionViewController *connVC = [[SDCardConnectionViewController alloc] init];
+//        [self.navigationController pushViewController:connVC animated:YES];
+        
+        
     }
 }
 

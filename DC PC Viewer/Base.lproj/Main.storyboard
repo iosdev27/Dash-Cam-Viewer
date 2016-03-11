@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WOR-O1-YQV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eVl-Cv-Pam">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -71,7 +71,7 @@
         <!--Card Connection View Controller-->
         <scene sceneID="Ubc-cu-zrQ">
             <objects>
-                <viewController id="WOR-O1-YQV" customClass="SDCardConnectionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SDCardConnectionVCID" id="WOR-O1-YQV" customClass="SDCardConnectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qm5-io-LWC"/>
                         <viewControllerLayoutGuide type="bottom" id="8IA-hH-XeW"/>
@@ -173,6 +173,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3Sb-gZ-tqm"/>
                     <connections>
                         <segue destination="HdM-da-APY" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="g92-9k-BDX"/>
                         <segue destination="ELz-Jv-ezN" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="uaI-2w-ZyE"/>
@@ -181,6 +182,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8C-Rf-4YL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="368" y="626.99999999999989"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="J6q-oH-W0T">
+            <objects>
+                <navigationController id="eVl-Cv-Pam" customClass="DCNavigationViewController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8wy-CH-1QD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TWX-EN-NPO" kind="relationship" relationship="rootViewController" id="7GJ-EC-YK8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KQS-lH-bOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="434" y="1659"/>
         </scene>
         <!-- -->
         <scene sceneID="y7Y-kK-CF1">
