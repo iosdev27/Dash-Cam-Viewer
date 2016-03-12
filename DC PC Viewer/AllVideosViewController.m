@@ -9,10 +9,6 @@
 #import "AllVideosViewController.h"
 #import "SWRevealViewController.h"
 
-
-
-
-
 @interface AllVideosViewController ()
 
 @end
@@ -20,6 +16,7 @@
 @implementation AllVideosViewController
 
 
+@synthesize allVideosTableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,6 +31,9 @@
         [self.menuBarButtonItem setAction:@selector(rightRevealToggle:)];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    
+    allVideosTableView.delegate = self;
+    allVideosTableView.dataSource = self;
     
 }
 
@@ -51,7 +51,6 @@
 }
 
 
-
 /*
 #pragma mark - Navigation
 
@@ -61,5 +60,31 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - allViedosTableView methods
+
+//manage datasource and  delegate for submenu tableview
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
+    if(cell == nil)
+    {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellID"];
+    }
+    
+    return cell;
+    
+}
+
 
 @end

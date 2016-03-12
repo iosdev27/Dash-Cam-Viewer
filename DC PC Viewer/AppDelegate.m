@@ -17,6 +17,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    
+    
+//    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+//                                                             bundle: nil];
+    
+//    UITabBarController *tabBarController = (UITabBarController*)[mainStoryboard
+//                                                       instantiateViewControllerWithIdentifier: @"tabBarControllerID"];
+    
+//    UITabBarController *tabBarController = (UITabBarController*)[mainStoryboard
+//                                                                 instantiateViewControllerWithIdentifier: @"testtabID"];
+    
+//    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+//
+//    [tabBarController setupSwipeGestureRecognizersAllowCyclingThroughTabs:NO];
+    
     return YES;
 }
 

@@ -10,10 +10,10 @@
 #import "SWRevealViewController.h"
 #import "Reachability.h"
 
-@interface AllVideosViewController : UIViewController
+@interface AllVideosViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIToolbar *navigationToolBar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButtonItem;
-
+@property (weak, nonatomic) IBOutlet UITableView *allVideosTableView;
 
 @end
