@@ -142,6 +142,8 @@
 		06C79E9A1C9342840043926E /* CEReversibleAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79E8E1C9342840043926E /* CEReversibleAnimationController.m */; };
 		06C79E9B1C9342840043926E /* CETurnAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79E901C9342840043926E /* CETurnAnimationController.m */; };
 		06C79E9D1C93445C0043926E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C79E9C1C93445C0043926E /* UIKit.framework */; };
+		06C79EA01C976BFC0043926E /* MapAndVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79E9F1C976BFC0043926E /* MapAndVideoViewController.m */; };
+		06C79EA21C9770070043926E /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C79EA11C9770070043926E /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -361,6 +363,9 @@
 		06C79E8F1C9342840043926E /* CETurnAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETurnAnimationController.h; sourceTree = "<group>"; };
 		06C79E901C9342840043926E /* CETurnAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETurnAnimationController.m; sourceTree = "<group>"; };
 		06C79E9C1C93445C0043926E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		06C79E9E1C976BFC0043926E /* MapAndVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAndVideoViewController.h; sourceTree = "<group>"; };
+		06C79E9F1C976BFC0043926E /* MapAndVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAndVideoViewController.m; sourceTree = "<group>"; };
+		06C79EA11C9770070043926E /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,6 +373,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06C79EA21C9770070043926E /* AVKit.framework in Frameworks */,
 				06C79E9D1C93445C0043926E /* UIKit.framework in Frameworks */,
 				06C79D651C90A2DD0043926E /* SystemConfiguration.framework in Frameworks */,
 				06975AB01C8E5F5400139433 /* QuartzCore.framework in Frameworks */,
@@ -469,6 +475,8 @@
 				06C79E391C91F8190043926E /* DCNavigationViewController.m */,
 				06C79E771C9340760043926E /* TabBarViewController.h */,
 				06C79E781C9340760043926E /* TabBarViewController.m */,
+				06C79E9E1C976BFC0043926E /* MapAndVideoViewController.h */,
+				06C79E9F1C976BFC0043926E /* MapAndVideoViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -476,6 +484,7 @@
 		06975AB11C8E657200139433 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06C79EA11C9770070043926E /* AVKit.framework */,
 				06C79E9C1C93445C0043926E /* UIKit.framework */,
 				06C79D641C90A2DD0043926E /* SystemConfiguration.framework */,
 				06975AAF1C8E5F5400139433 /* QuartzCore.framework */,
@@ -984,6 +993,7 @@
 				06C79E741C933F940043926E /* CEHorizontalSwipeInteractionController.m in Sources */,
 				06C79E951C9342840043926E /* CEFlipAnimationController.m in Sources */,
 				06C79E791C9340760043926E /* TabBarViewController.m in Sources */,
+				06C79EA01C976BFC0043926E /* MapAndVideoViewController.m in Sources */,
 				06C79E981C9342840043926E /* CEPanAnimationController.m in Sources */,
 				0620219D1C8E368100A04034 /* AllVideosViewController.m in Sources */,
 				06C79E9A1C9342840043926E /* CEReversibleAnimationController.m in Sources */,

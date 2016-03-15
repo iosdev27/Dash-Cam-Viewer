@@ -113,7 +113,61 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWf-bh-4v0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2522" y="1579"/>
+            <point key="canvasLocation" x="2134" y="1579"/>
+        </scene>
+        <!--Map And Video View Controller-->
+        <scene sceneID="aRx-uG-8vg">
+            <objects>
+                <viewController storyboardIdentifier="MapVideoVCID" id="bJ3-kM-aHh" customClass="MapAndVideoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uoc-67-t2W"/>
+                        <viewControllerLayoutGuide type="bottom" id="blH-oh-NBt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eKV-Iz-hGh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N5M-pe-0Fd">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="fixedSpace" id="h0E-wu-3vO"/>
+                                    <barButtonItem style="plain" id="lmT-MO-KQf">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7cT-kT-BRX">
+                                            <rect key="frame" x="16" y="7" width="44" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="&lt;Back"/>
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="bJ3-kM-aHh" eventType="touchUpInside" id="Nhl-UV-1Ci"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem width="84" style="plain" systemItem="fixedSpace" id="jww-lC-jhy"/>
+                                    <barButtonItem title="Dash Cam" id="lh7-hF-Mkb"/>
+                                    <barButtonItem width="55" style="plain" systemItem="fixedSpace" id="qn4-Vj-vdL"/>
+                                    <barButtonItem image="BTN_Header_Gallery2_NML.png" id="GsG-xb-fa3"/>
+                                    <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="dPT-uv-Hg8"/>
+                                    <barButtonItem image="BTN_Header_Hamburger2_NML.png" id="RdI-XS-JLy"/>
+                                    <barButtonItem style="plain" systemItem="fixedSpace" id="av4-DP-Wvy"/>
+                                </items>
+                            </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AZ2-Of-VTy">
+                                <rect key="frame" x="0.0" y="72" width="375" height="207"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bJ3-kM-aHh" id="5QY-Iq-1bX"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hSj-ik-NSg"/>
+                    <connections>
+                        <outlet property="backButton" destination="7cT-kT-BRX" id="tV7-zQ-3yQ"/>
+                        <outlet property="tripMapView" destination="AZ2-Of-VTy" id="Vwl-GJ-RUJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ysh-pF-A7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3074" y="1579"/>
         </scene>
         <!-- -->
         <scene sceneID="5Ob-NR-w9m">

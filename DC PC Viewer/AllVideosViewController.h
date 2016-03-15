@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
 #import "Reachability.h"
+#import "MapAndVideoViewController.h"
 
-@interface AllVideosViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface AllVideosViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+    NSMutableSet *_collapsedSections;
+}
 
 @property (weak, nonatomic) IBOutlet UIToolbar *navigationToolBar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButtonItem;
