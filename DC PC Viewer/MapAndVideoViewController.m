@@ -28,12 +28,12 @@
     AVPlayer *myPlayer;
     
     
-    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"vid" ofType:@"mp4"];
-    NSURL *fileURL = [NSURL fileURLWithPath:filepath];
-    myPlayer = [AVPlayer playerWithURL:fileURL];
+//    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"vid" ofType:@"mp4"];
+//    NSURL *fileURL = [NSURL fileURLWithPath:filepath];
+//    myPlayer = [AVPlayer playerWithURL:fileURL];
     
-//    NSURL *videoURL = [[NSBundle mainBundle]URLForResource:@"video" withExtension:@"mp4"];
-//    AVPlayer *player = [AVPlayer playerWithURL:videoURL];
+    NSURL *videoURL = [[NSBundle mainBundle]URLForResource:@"TCI_1" withExtension:@"MP4"];
+    myPlayer = [AVPlayer playerWithURL:videoURL];
   
     avpController.player = myPlayer;
     [myPlayer play];

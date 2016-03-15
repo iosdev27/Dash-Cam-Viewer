@@ -144,6 +144,7 @@
 		06C79E9D1C93445C0043926E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C79E9C1C93445C0043926E /* UIKit.framework */; };
 		06C79EA01C976BFC0043926E /* MapAndVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79E9F1C976BFC0043926E /* MapAndVideoViewController.m */; };
 		06C79EA21C9770070043926E /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C79EA11C9770070043926E /* AVKit.framework */; };
+		06C79EA61C9891790043926E /* TCI_1.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 06C79EA51C9891790043926E /* TCI_1.MP4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -366,6 +367,8 @@
 		06C79E9E1C976BFC0043926E /* MapAndVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAndVideoViewController.h; sourceTree = "<group>"; };
 		06C79E9F1C976BFC0043926E /* MapAndVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAndVideoViewController.m; sourceTree = "<group>"; };
 		06C79EA11C9770070043926E /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		06C79EA31C9890D50043926E /* 000101090000_0001.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 000101090000_0001.MP4; sourceTree = "<group>"; };
+		06C79EA51C9891790043926E /* TCI_1.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TCI_1.MP4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -400,6 +403,8 @@
 		062021581C8E33FA00A04034 = {
 			isa = PBXGroup;
 			children = (
+				06C79EA51C9891790043926E /* TCI_1.MP4 */,
+				06C79EA31C9890D50043926E /* 000101090000_0001.MP4 */,
 				062021631C8E33FA00A04034 /* DC PC Viewer */,
 				062021801C8E33FA00A04034 /* DC PC ViewerTests */,
 				0620218B1C8E33FA00A04034 /* DC PC ViewerUITests */,
@@ -853,6 +858,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06C79EA61C9891790043926E /* TCI_1.MP4 in Resources */,
 				06C79D5B1C90A1400043926E /* IMG_List-Other-Icon.png in Resources */,
 				06C79DBE1C90EF670043926E /* Variation 1 ver22.png in Resources */,
 				06C79DC21C90EF670043926E /* Video Play Screen no lock.png in Resources */,
