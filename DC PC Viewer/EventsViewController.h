@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWRevealViewController.h"
 
-@interface EventsViewController : UIViewController
+@interface EventsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButtonItem;
+@property (weak, nonatomic) IBOutlet UITableView *eventsTableView;
 
 @end

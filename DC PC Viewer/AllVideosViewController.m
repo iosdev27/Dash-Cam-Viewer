@@ -38,6 +38,7 @@
     
     allVideosTableView.delegate = self;
     allVideosTableView.dataSource = self;
+ 
     
 }
 

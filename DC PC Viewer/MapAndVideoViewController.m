@@ -85,14 +85,16 @@
     NSLog(@"%@", [self deviceLocation]);
     
     //View Area
-//    MKCoordinateRegion region = { { 0.0, 0.0 }, { 0.0, 0.0 } };
-//  
+    MKCoordinateRegion region = { { 0.0, 0.0 }, { 0.0, 0.0 } };
+  
 //    region.center.latitude = self.locationManager.location.coordinate.latitude;
 //    region.center.longitude = self.locationManager.location.coordinate.longitude;
-//    region.span.longitudeDelta = 0.005f;
-//    region.span.longitudeDelta = 0.005f;
-//    [tripMapView setRegion:region animated:YES];
-//    
+    region.center.latitude = 43.7816477;
+    region.center.longitude = -79.24443839999998;
+    region.span.longitudeDelta = 3; //.005
+    region.span.longitudeDelta = 3;
+    [tripMapView setRegion:region animated:YES];
+//
 }
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {

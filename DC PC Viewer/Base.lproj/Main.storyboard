@@ -20,14 +20,16 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ka7-eG-le6">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem style="plain" systemItem="fixedSpace" id="UCm-so-HV0"/>
-                                    <barButtonItem title="Back" id="8jW-ro-WxJ"/>
-                                    <barButtonItem width="88" style="plain" systemItem="fixedSpace" id="1aB-oN-7Gp"/>
+                                    <barButtonItem width="132" style="plain" systemItem="fixedSpace" id="1aB-oN-7Gp"/>
                                     <barButtonItem title="Dash Cam" id="JGA-sc-q4F"/>
-                                    <barButtonItem width="91" style="plain" systemItem="fixedSpace" id="O3I-AI-rSl"/>
-                                    <barButtonItem image="menu.png" id="TBH-MP-HdO"/>
+                                    <barButtonItem width="100" style="plain" systemItem="fixedSpace" id="O3I-AI-rSl"/>
+                                    <barButtonItem image="BTN_Header_Hamburger2_NML.png" id="TBH-MP-HdO"/>
                                 </items>
                             </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WDq-OG-QAK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -36,38 +38,32 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Title" id="zkz-1u-izY"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="eventsTableView" destination="WDq-OG-QAK" id="1AL-ep-9nI"/>
+                        <outlet property="menuBarButtonItem" destination="TBH-MP-HdO" id="ZiU-Ts-aUn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qc7-MU-hED" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2522" y="737"/>
         </scene>
-        <!--Menu View Controller-->
-        <scene sceneID="rHu-fq-b4K">
+        <!--Hamburger Menu View Controller-->
+        <scene sceneID="wag-Yb-Lbx">
             <objects>
-                <tableViewController title="Menu View Controller" id="ELz-Jv-ezN" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fwo-Aa-BLa">
+                <viewController id="bQ5-Qk-1nP" customClass="HamburgerMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b6z-l6-43A"/>
+                        <viewControllerLayoutGuide type="bottom" id="e2r-gb-YMI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K4a-Aa-IVZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7qM-xq-Xvi">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7qM-xq-Xvi" id="Tec-MN-whJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ELz-Jv-ezN" id="27r-ed-XLa"/>
-                            <outlet property="delegate" destination="ELz-Jv-ezN" id="b06-fL-qCU"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cxL-et-LS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tS7-oF-44K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1310" y="1579"/>
+            <point key="canvasLocation" x="1190" y="1579"/>
         </scene>
         <!--Card Connection View Controller-->
         <scene sceneID="Ubc-cu-zrQ">
@@ -181,16 +177,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xVn-SD-f7l">
-                                <rect key="frame" x="0.0" y="64" width="375" height="492"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4cJ-sa-Nja">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem style="plain" systemItem="fixedSpace" id="EYa-Y7-uJF"/>
-                                    <barButtonItem title="Back" id="u1C-3i-fjd"/>
-                                    <barButtonItem width="88" style="plain" systemItem="fixedSpace" id="SdE-mm-pTn"/>
+                                    <barButtonItem width="139" style="plain" systemItem="fixedSpace" id="SdE-mm-pTn"/>
                                     <barButtonItem title="Dash Cam" id="NRN-vI-Rt7"/>
                                     <barButtonItem width="55" style="plain" systemItem="fixedSpace" id="2qW-it-qq1"/>
                                     <barButtonItem image="BTN_Header_Gallery2_NML.png" id="cgk-Np-sxZ"/>
@@ -199,6 +189,10 @@
                                     <barButtonItem style="plain" systemItem="fixedSpace" id="Y2e-EO-pYc"/>
                                 </items>
                             </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xVn-SD-f7l">
+                                <rect key="frame" x="0.0" y="64" width="375" height="562"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -234,7 +228,7 @@
                     <navigationItem key="navigationItem" id="3Sb-gZ-tqm"/>
                     <connections>
                         <segue destination="HdM-da-APY" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="g92-9k-BDX"/>
-                        <segue destination="ELz-Jv-ezN" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="uaI-2w-ZyE"/>
+                        <segue destination="bQ5-Qk-1nP" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="Aek-IX-7Fc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8C-Rf-4YL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -279,6 +273,5 @@
     <resources>
         <image name="BTN_Header_Gallery2_NML.png" width="20" height="20"/>
         <image name="BTN_Header_Hamburger2_NML.png" width="20" height="20"/>
-        <image name="menu.png" width="28" height="20"/>
     </resources>
 </document>
