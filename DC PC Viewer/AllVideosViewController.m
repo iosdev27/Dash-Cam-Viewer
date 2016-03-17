@@ -118,6 +118,8 @@
     result.tag = section;
     [result setBackgroundImage:[UIImage imageNamed:@"List-Header-Base.png"] forState:UIControlStateNormal];
     
+    [self sectionButtonTouchUpInside:result];
+    
     return result;
 }
 
