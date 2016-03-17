@@ -178,6 +178,8 @@ static CGFloat scaledValue( CGFloat v1, CGFloat min2, CGFloat max2, CGFloat min1
     CGFloat location = 0.0f;
     
     int symetry = frontViewPosition<FrontViewPositionLeft? -1 : 1;
+
+
     [_c _getRevealWidth:&revealWidth revealOverDraw:&revealOverdraw forSymetry:symetry];
     [_c _getAdjustedFrontViewPosition:&frontViewPosition forSymetry:symetry];
     
@@ -212,6 +214,7 @@ static CGFloat scaledValue( CGFloat v1, CGFloat min2, CGFloat max2, CGFloat min1
     CGRect bounds = self.bounds;
     
     FrontViewPosition position = _c.frontViewPosition;
+
     CGFloat xLocation = [self frontLocationForPosition:position];
     
     // set rear view frames
@@ -219,6 +222,7 @@ static CGFloat scaledValue( CGFloat v1, CGFloat min2, CGFloat max2, CGFloat min1
     
     // set front view frame
     CGRect frame = CGRectMake(xLocation, 0.0f, bounds.size.width, bounds.size.height);
+
     _frontView.frame = [self hierarchycalFrameAdjustment:frame];
     
     // setup front view shadow path if needed (front view loaded and not removed)
@@ -753,6 +757,7 @@ const int FrontViewPositionNone = 0xff;
     // If you need to manipulate views of any of your child controllers in an override
     // of this method, you can load yourself the views explicitly on your overriden method.
     // However we discourage it as an app following the MVC principles should never need to do so
+    
         
   [_frontViewController view];
   [_rearViewController view];
@@ -949,7 +954,7 @@ const int FrontViewPositionNone = 0xff;
 {
     FrontViewPosition toggledFrontViewPosition = FrontViewPositionLeft;
     if (_frontViewPosition >= FrontViewPositionLeft)
-        toggledFrontViewPosition = FrontViewPositionLeftSide;
+        toggledFrontViewPosition = FrontViewPositionLeftSideMost;
     
     [self setFrontViewPosition:toggledFrontViewPosition animated:animated];
 }
@@ -1718,6 +1723,7 @@ const int FrontViewPositionNone = 0xff;
         return ^(void){};
     
     CGRect frame = view.bounds;
+    
     
     UIView *controllerView = controller.view;
     controllerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;

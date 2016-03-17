@@ -7,7 +7,7 @@
 //
 
 #import "AllVideosViewController.h"
-#import "SWRevealViewController.h"
+
 
 @interface AllVideosViewController ()
 
@@ -33,9 +33,10 @@
         
         allVideosTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
         
-        _collapsedSections = [NSMutableSet new];
+        
     }
     
+    _collapsedSections = [NSMutableSet new];
     allVideosTableView.delegate = self;
     allVideosTableView.dataSource = self;
  

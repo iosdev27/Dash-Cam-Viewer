@@ -145,7 +145,7 @@
 		06C79EA01C976BFC0043926E /* MapAndVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79E9F1C976BFC0043926E /* MapAndVideoViewController.m */; };
 		06C79EA21C9770070043926E /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C79EA11C9770070043926E /* AVKit.framework */; };
 		06C79EA61C9891790043926E /* TCI_1.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 06C79EA51C9891790043926E /* TCI_1.MP4 */; };
-		06C79EA91C98D6F40043926E /* HamburgerMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79EA81C98D6F40043926E /* HamburgerMenuViewController.m */; };
+		06C79EAC1C98DCB00043926E /* HamMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79EAB1C98DCB00043926E /* HamMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -369,8 +369,8 @@
 		06C79E9F1C976BFC0043926E /* MapAndVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAndVideoViewController.m; sourceTree = "<group>"; };
 		06C79EA11C9770070043926E /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		06C79EA51C9891790043926E /* TCI_1.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TCI_1.MP4; sourceTree = "<group>"; };
-		06C79EA71C98D6F40043926E /* HamburgerMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HamburgerMenuViewController.h; sourceTree = "<group>"; };
-		06C79EA81C98D6F40043926E /* HamburgerMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HamburgerMenuViewController.m; sourceTree = "<group>"; };
+		06C79EAA1C98DCB00043926E /* HamMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HamMenuViewController.h; sourceTree = "<group>"; };
+		06C79EAB1C98DCB00043926E /* HamMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HamMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -483,8 +483,8 @@
 				06C79E781C9340760043926E /* TabBarViewController.m */,
 				06C79E9E1C976BFC0043926E /* MapAndVideoViewController.h */,
 				06C79E9F1C976BFC0043926E /* MapAndVideoViewController.m */,
-				06C79EA71C98D6F40043926E /* HamburgerMenuViewController.h */,
-				06C79EA81C98D6F40043926E /* HamburgerMenuViewController.m */,
+				06C79EAA1C98DCB00043926E /* HamMenuViewController.h */,
+				06C79EAB1C98DCB00043926E /* HamMenuViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -993,6 +993,7 @@
 				06C79E2F1C910C1B0043926E /* DGActivityIndicatorThreeDotsAnimation.m in Sources */,
 				06C79E131C910C1B0043926E /* DGActivityIndicatorBallBeatAnimation.m in Sources */,
 				06C79E201C910C1B0043926E /* DGActivityIndicatorBallSpinFadeLoader.m in Sources */,
+				06C79EAC1C98DCB00043926E /* HamMenuViewController.m in Sources */,
 				062021661C8E33FA00A04034 /* main.m in Sources */,
 				06C79E2E1C910C1B0043926E /* DGActivityIndicatorRotatingTrigonAnimation.m in Sources */,
 				06C79E231C910C1B0043926E /* DGActivityIndicatorBallZigZagDeflectAnimation.m in Sources */,
@@ -1009,7 +1010,6 @@
 				06C79E311C910C1B0043926E /* DGActivityIndicatorTriplePulseAnimation.m in Sources */,
 				06C79E2D1C910C1B0043926E /* DGActivityIndicatorRotatingSquaresAnimation.m in Sources */,
 				06C79E1A1C910C1B0043926E /* DGActivityIndicatorBallPulseSyncAnimation.m in Sources */,
-				06C79EA91C98D6F40043926E /* HamburgerMenuViewController.m in Sources */,
 				06C79E1B1C910C1B0043926E /* DGActivityIndicatorBallRotateAnimation.m in Sources */,
 				062021721C8E33FA00A04034 /* DC_PC_Viewer.xcdatamodeld in Sources */,
 				06C79E971C9342840043926E /* CENatGeoAnimationController.m in Sources */,
