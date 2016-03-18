@@ -15,7 +15,7 @@
     NSMutableSet *_collapsedSections;
 }
 
-@property (weak, nonatomic) IBOutlet UIToolbar *navigationToolBar;
+//@property (weak, nonatomic) IBOutlet UIToolbar *navigationToolBar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButtonItem;
 @property (weak, nonatomic) IBOutlet UITableView *allVideosTableView;
 

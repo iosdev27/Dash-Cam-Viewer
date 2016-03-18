@@ -81,6 +81,13 @@
     return UIInterfaceOrientationMaskPortrait;
 }
 
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    if (self.view.userInteractionEnabled) {
+        NSLog(@"User Interaction enabled.");
+    } else
+        NSLog(@"User Interaction disabled.");
+}
+
 -(BOOL)shouldAutorotate
 {
     return NO;

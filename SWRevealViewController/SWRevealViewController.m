@@ -214,7 +214,7 @@ static CGFloat scaledValue( CGFloat v1, CGFloat min2, CGFloat max2, CGFloat min1
     CGRect bounds = self.bounds;
     
     FrontViewPosition position = _c.frontViewPosition;
-
+//    FrontViewPosition position = 1;
     CGFloat xLocation = [self frontLocationForPosition:position];
     
     // set rear view frames
