@@ -17,6 +17,7 @@
 		0620218D1C8E33FA00A04034 /* DC_PC_ViewerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0620218C1C8E33FA00A04034 /* DC_PC_ViewerUITests.m */; };
 		0620219D1C8E368100A04034 /* AllVideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0620219B1C8E368100A04034 /* AllVideosViewController.m */; };
 		062021A31C8E36C400A04034 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 062021A11C8E36C400A04034 /* EventsViewController.m */; };
+		0638E6751CA07D5A006EED5B /* SubClassofSWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0638E6741CA07D5A006EED5B /* SubClassofSWRevealViewController.m */; };
 		06975AB01C8E5F5400139433 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06975AAF1C8E5F5400139433 /* QuartzCore.framework */; };
 		06975AB51C8E682B00139433 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06975AB41C8E682B00139433 /* SWRevealViewController.m */; };
 		06975AB91C8F914900139433 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 06975AB71C8F914900139433 /* menu.png */; };
@@ -185,6 +186,8 @@
 		0620219B1C8E368100A04034 /* AllVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllVideosViewController.m; sourceTree = "<group>"; };
 		062021A01C8E36C400A04034 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		062021A11C8E36C400A04034 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		0638E6731CA07D5A006EED5B /* SubClassofSWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubClassofSWRevealViewController.h; sourceTree = "<group>"; };
+		0638E6741CA07D5A006EED5B /* SubClassofSWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubClassofSWRevealViewController.m; sourceTree = "<group>"; };
 		06975AAF1C8E5F5400139433 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		06975AB31C8E682B00139433 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		06975AB41C8E682B00139433 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -485,6 +488,8 @@
 				06C79E9F1C976BFC0043926E /* MapAndVideoViewController.m */,
 				06C79EAA1C98DCB00043926E /* HamMenuViewController.h */,
 				06C79EAB1C98DCB00043926E /* HamMenuViewController.m */,
+				0638E6731CA07D5A006EED5B /* SubClassofSWRevealViewController.h */,
+				0638E6741CA07D5A006EED5B /* SubClassofSWRevealViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -995,6 +1000,7 @@
 				06C79E201C910C1B0043926E /* DGActivityIndicatorBallSpinFadeLoader.m in Sources */,
 				06C79EAC1C98DCB00043926E /* HamMenuViewController.m in Sources */,
 				062021661C8E33FA00A04034 /* main.m in Sources */,
+				0638E6751CA07D5A006EED5B /* SubClassofSWRevealViewController.m in Sources */,
 				06C79E2E1C910C1B0043926E /* DGActivityIndicatorRotatingTrigonAnimation.m in Sources */,
 				06C79E231C910C1B0043926E /* DGActivityIndicatorBallZigZagDeflectAnimation.m in Sources */,
 				06C79E221C910C1B0043926E /* DGActivityIndicatorBallZigZagAnimation.m in Sources */,

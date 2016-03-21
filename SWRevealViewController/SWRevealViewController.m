@@ -214,7 +214,6 @@ static CGFloat scaledValue( CGFloat v1, CGFloat min2, CGFloat max2, CGFloat min1
     CGRect bounds = self.bounds;
     
     FrontViewPosition position = _c.frontViewPosition;
-//    FrontViewPosition position = 1;
     CGFloat xLocation = [self frontLocationForPosition:position];
     
     // set rear view frames
@@ -222,7 +221,6 @@ static CGFloat scaledValue( CGFloat v1, CGFloat min2, CGFloat max2, CGFloat min1
     
     // set front view frame
     CGRect frame = CGRectMake(xLocation, 0.0f, bounds.size.width, bounds.size.height);
-
     _frontView.frame = [self hierarchycalFrameAdjustment:frame];
     
     // setup front view shadow path if needed (front view loaded and not removed)
@@ -759,8 +757,8 @@ const int FrontViewPositionNone = 0xff;
     // However we discourage it as an app following the MVC principles should never need to do so
     
         
-  [_frontViewController view];
-  [_rearViewController view];
+//  [_frontViewController view];
+//  [_rearViewController view];
 
 //     we store at this point the view's user interaction state as we may temporarily disable it
 //     and resume it back to the previous state, it is possible to override this behaviour by
@@ -954,7 +952,7 @@ const int FrontViewPositionNone = 0xff;
 {
     FrontViewPosition toggledFrontViewPosition = FrontViewPositionLeft;
     if (_frontViewPosition >= FrontViewPositionLeft)
-        toggledFrontViewPosition = FrontViewPositionLeftSideMost;
+        toggledFrontViewPosition = FrontViewPositionLeftSide;
     
     [self setFrontViewPosition:toggledFrontViewPosition animated:animated];
 }
@@ -1723,7 +1721,6 @@ const int FrontViewPositionNone = 0xff;
         return ^(void){};
     
     CGRect frame = view.bounds;
-    
     
     UIView *controllerView = controller.view;
     controllerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
