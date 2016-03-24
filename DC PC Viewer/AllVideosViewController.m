@@ -9,6 +9,7 @@
 #import "AllVideosViewController.h"
 
 
+
 @interface AllVideosViewController ()
 
 @end
@@ -21,35 +22,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-
     // Do any additional setup after loading the view from its nib.
+    self.navigationController.navigationBar.hidden = YES;
+    
     SWRevealViewController *revealViewController = self.revealViewController;
     
     if (revealViewController) {
         [self.menuBarButtonItem setTarget:self.revealViewController];
-//        [self.menuBarButtonItem setAction:@selector(revealToggle:)];
         [self.menuBarButtonItem setAction:@selector(rightRevealToggle:)];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
         
         allVideosTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-        
-        
     }
     
-    _collapsedSections = [NSMutableSet new];
     allVideosTableView.delegate = self;
     allVideosTableView.dataSource = self;
- 
+    
+    [allVideosTableView openSection:0 animated:NO];
     
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,55 +68,30 @@
 //manage datasource and  delegate for submenu tableview
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 3;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_collapsedSections containsObject:@(section)] ? 0 : 5;
+    //    return [_collapsedSections containsObject:@(section)] ? 0 : 2;
+    return 2;
 }
 
--(NSArray*) indexPathsForSection:(int)section withNumberOfRows:(int)numberOfRows {
-    NSMutableArray* indexPaths = [NSMutableArray new];
-    for (int i = 0; i < numberOfRows; i++) {
-        NSIndexPath* indexPath = [NSIndexPath indexPathForRow:i inSection:section];
-        [indexPaths addObject:indexPath];
-    }
-    return indexPaths;
-}
-
--(void)sectionButtonTouchUpInside:(UIButton*)sender {
-    sender.backgroundColor = [UIColor grayColor];
-    [self.allVideosTableView beginUpdates];
-    int section = sender.tag;
-    bool shouldCollapse = ![_collapsedSections containsObject:@(section)];
-    if (shouldCollapse) {
-        int numOfRows = [self.allVideosTableView numberOfRowsInSection:section];
-        NSArray* indexPaths = [self indexPathsForSection:section withNumberOfRows:numOfRows];
-        [self.allVideosTableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationTop];
-        [_collapsedSections addObject:@(section)];
-    }
-    else {
-        int numOfRows = 5;
-        NSArray* indexPaths = [self indexPathsForSection:section withNumberOfRows:numOfRows];
-        [self.allVideosTableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationTop];
-        [_collapsedSections removeObject:@(section)];
-    }
-    [self.allVideosTableView endUpdates];
-    //[_tableView reloadData];
-}
-
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIButton* result = [UIButton buttonWithType:UIButtonTypeCustom];
-    [result addTarget:self action:@selector(sectionButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
-    result.backgroundColor = [UIColor grayColor];
-    [result setTitle:[NSString stringWithFormat:@"Section %d", section] forState:UIControlStateNormal];
-    result.tag = section;
-    [result setBackgroundImage:[UIImage imageNamed:@"List-Header-Base.png"] forState:UIControlStateNormal];
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [self sectionButtonTouchUpInside:result];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCell"];
     
-    return result;
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MyCell"];
+    }
+    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"List_New.png"]];
+    
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -129,25 +99,27 @@
     return 60;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell* result =  [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-//    result.textLabel.text = [NSString stringWithFormat:@"Cell %d", indexPath.row];
-//    result.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"List_New.png"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0]];
-    result.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"List_New.png"]];
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIButton* result = [UIButton buttonWithType:UIButtonTypeCustom];
+    [result addTarget:self action:@selector(sectionButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
+    result.backgroundColor = [UIColor grayColor];
+    [result setTitle:[NSString stringWithFormat:@"Section %ld", (long)section] forState:UIControlStateNormal];
+    result.tag = section;
+    [result setBackgroundImage:[UIImage imageNamed:@"List-Header-Base.png"] forState:UIControlStateNormal];
+    
+    //    [self sectionButtonTouchUpInside:result];
+    
     return result;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    return 80;
+- (void)sectionButtonTouchUpInside:(UIButton*)sender {
+    [self.allVideosTableView toggleSection:sender.tag animated:YES];
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UIStoryboard *storyboard = self.navigationController.storyboard;
-    
-    MapAndVideoViewController *mapAndVideoVC = [storyboard instantiateViewControllerWithIdentifier:@"MapVideoVCID"];
-    [self.navigationController pushViewController:mapAndVideoVC animated:YES];
-}
+
 
 @end

@@ -17,13 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.rightViewRevealWidth = 305;
+    self.rightViewRevealWidth = 320;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation

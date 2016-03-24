@@ -7,6 +7,10 @@
 //
 
 #import "HamMenuViewController.h"
+#import "AllVideosViewController.h"
+#import "EventsViewController.h"
+#import "TabBarViewController.h"
+#import "SubClassofSWRevealViewController.h"
 
 @interface HamMenuViewController () {
     NSMutableArray *tableData;
@@ -20,9 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     self.view.backgroundColor = [UIColor grayColor];
     hamMentTableView.backgroundColor = [UIColor grayColor];
-    
     hamMentTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     hamMentTableView.delegate = self;
@@ -53,33 +57,40 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"EventsCell"];
-//    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"List_New.png"]];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"myCell"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    
     if (indexPath.row == 0) {
         UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"On", @"Off", nil]];
         segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        segmentedControl.frame = CGRectMake(75, 5, 100, 30);
+        segmentedControl.frame = CGRectMake(0, 5, 90, 30);
         
         segmentedControl.tag = indexPath.row;
         [segmentedControl addTarget:self action:@selector(didChangeSegmentedControl:) forControlEvents:UIControlEventValueChanged];
         segmentedControl.selectedSegmentIndex = 0;
         cell.accessoryView = segmentedControl;
         cell.textLabel.text = @"View Videos on DashCam";
-        cell.detailTextLabel.text = @"recording will be disabled.";
-        
+        cell.detailTextLabel.text = @"recording will be disabled";
     } else {
         cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
     }
-//    cell.accessoryType = UITableViewCellAccessoryCheckmark;
     cell.backgroundColor = [UIColor grayColor];
+
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView reloadData];
-    UITableViewCell *cell=(UITableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
-//    [cell setBackgroundColor:[UIColor orangeColor]];
-    cell.backgroundColor = [UIColor grayColor];
+    
+    if (indexPath.row == 1 || indexPath.row == 2) {
+        UITabBarController *tabBarController = (UITabBarController*)self.revealViewController.frontViewController;
+        tabBarController.selectedIndex = (indexPath.row)-1;
+        [self.revealViewController pushFrontViewController:tabBarController animated:YES];
+    }
 }
 
 - (void)didChangeSegmentedControl:(UISegmentedControl *)control {

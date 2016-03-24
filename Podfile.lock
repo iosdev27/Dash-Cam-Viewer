@@ -1,0 +1,10 @@
+PODS:
+  - STCollapseTableView (0.1.1)
+
+DEPENDENCIES:
+  - STCollapseTableView (~> 0.1.1)
+
+SPEC CHECKSUMS:
+  STCollapseTableView: edd40eacf9411ce862da921f83e0b7b1680fac4d
+
+COCOAPODS: 0.39.0

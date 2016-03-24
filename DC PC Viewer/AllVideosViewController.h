@@ -10,13 +10,17 @@
 #import "SWRevealViewController.h"
 #import "Reachability.h"
 #import "MapAndVideoViewController.h"
+#import "STCollapseTableView.h"
 
 @interface AllVideosViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
-    NSMutableSet *_collapsedSections;
+
 }
 
 //@property (weak, nonatomic) IBOutlet UIToolbar *navigationToolBar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButtonItem;
-@property (weak, nonatomic) IBOutlet UITableView *allVideosTableView;
+//@property (weak, nonatomic) IBOutlet UITableView *allVideosTableView;
+@property (weak, nonatomic) IBOutlet STCollapseTableView *allVideosTableView;
+
+
 
 @end
