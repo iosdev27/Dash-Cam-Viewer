@@ -86,6 +86,10 @@
     }
     cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LIST_Chpt_NML.png"]];
     
+    UIImageView *thumbnailImageForCell = [[UIImageView alloc]initWithFrame:CGRectMake(15,7,78,56)];
+    thumbnailImageForCell.image = [UIImage imageNamed:@"SAMPLE_Thumbnail4List@2x.png"];
+    
+    [cell.contentView addSubview:thumbnailImageForCell];
     
     return cell;
 }
@@ -101,23 +105,21 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 60;
+    return 56.5;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60;
+    return 73.5;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIButton* result = [UIButton buttonWithType:UIButtonTypeCustom];
     [result addTarget:self action:@selector(sectionButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
-//    result.backgroundColor = [UIColor grayColor];
     [result setTitle:[NSString stringWithFormat:@"Section %ld", (long)section] forState:UIControlStateNormal];
     result.tag = section;
     [result setBackgroundImage:[UIImage imageNamed:@"LIST_Trip_NML.png"] forState:UIControlStateNormal];
     
     //    [self sectionButtonTouchUpInside:result];
-    
     return result;
 }
 

@@ -69,7 +69,7 @@
     
     tripMapView.frame = CGRectMake(0, 45, 375, 250);
     tripMapView.delegate = self;
-    [tripMapView setMapType:MKMapTypeSatelliteFlyover];
+    [tripMapView setMapType:MKMapTypeStandard];
     [tripMapView setZoomEnabled:YES];
     [tripMapView setScrollEnabled:YES];
 //    [tripMapView setCenterCoordinate:tripMapView.userLocation.location.coordinate animated:YES];

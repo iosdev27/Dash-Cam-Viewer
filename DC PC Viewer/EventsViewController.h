@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
+#import "MapAndVideoViewController.h"
 
 @interface EventsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 

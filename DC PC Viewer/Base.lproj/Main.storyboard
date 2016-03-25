@@ -20,9 +20,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ka7-eG-le6">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem width="132" style="plain" systemItem="fixedSpace" id="1aB-oN-7Gp"/>
+                                    <barButtonItem width="137" style="plain" systemItem="fixedSpace" id="1aB-oN-7Gp"/>
                                     <barButtonItem title="Dash Cam" id="JGA-sc-q4F"/>
-                                    <barButtonItem width="100" style="plain" systemItem="fixedSpace" id="O3I-AI-rSl"/>
+                                    <barButtonItem width="55" style="plain" systemItem="fixedSpace" id="AhB-SS-cei"/>
+                                    <barButtonItem image="BTN_NaviBar_Gallery_NML.png" id="r6K-ln-eBZ"/>
+                                    <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="O3I-AI-rSl"/>
                                     <barButtonItem image="BTN_NaviBar_Hamburger_NML.png" id="TBH-MP-HdO"/>
                                 </items>
                             </toolbar>
@@ -65,8 +67,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="awo-PH-KD9">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem style="plain" systemItem="fixedSpace" id="sRp-bw-F70"/>
-                                    <barButtonItem width="139" style="plain" systemItem="fixedSpace" id="MAi-fw-Fml"/>
+                                    <barButtonItem width="137" style="plain" systemItem="fixedSpace" id="MAi-fw-Fml"/>
                                     <barButtonItem title="Dash Cam" id="oeX-cK-NcB"/>
                                     <barButtonItem width="55" style="plain" systemItem="fixedSpace" id="cbb-my-l5P"/>
                                     <barButtonItem image="BTN_NaviBar_Gallery_NML.png" id="AJj-hu-8Ku"/>
@@ -159,7 +160,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4cJ-sa-Nja">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem width="139" style="plain" systemItem="fixedSpace" id="SdE-mm-pTn"/>
+                                    <barButtonItem width="137" style="plain" systemItem="fixedSpace" id="SdE-mm-pTn"/>
                                     <barButtonItem title="Dash Cam" id="NRN-vI-Rt7"/>
                                     <barButtonItem width="55" style="plain" systemItem="fixedSpace" id="2qW-it-qq1"/>
                                     <barButtonItem image="BTN_NaviBar_Gallery_NML.png" id="cgk-Np-sxZ"/>
