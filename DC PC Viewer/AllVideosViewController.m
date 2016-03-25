@@ -68,13 +68,13 @@
 //manage datasource and  delegate for submenu tableview
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 5;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //    return [_collapsedSections containsObject:@(section)] ? 0 : 2;
-    return 2;
+    return 5;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -84,7 +84,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MyCell"];
     }
-    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"List_New.png"]];
+    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LIST_Chpt_NML.png"]];
     
     
     return cell;
@@ -111,10 +111,10 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIButton* result = [UIButton buttonWithType:UIButtonTypeCustom];
     [result addTarget:self action:@selector(sectionButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
-    result.backgroundColor = [UIColor grayColor];
+//    result.backgroundColor = [UIColor grayColor];
     [result setTitle:[NSString stringWithFormat:@"Section %ld", (long)section] forState:UIControlStateNormal];
     result.tag = section;
-    [result setBackgroundImage:[UIImage imageNamed:@"List-Header-Base.png"] forState:UIControlStateNormal];
+    [result setBackgroundImage:[UIImage imageNamed:@"LIST_Trip_NML.png"] forState:UIControlStateNormal];
     
     //    [self sectionButtonTouchUpInside:result];
     

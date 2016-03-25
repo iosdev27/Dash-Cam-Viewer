@@ -23,7 +23,7 @@
                                     <barButtonItem width="132" style="plain" systemItem="fixedSpace" id="1aB-oN-7Gp"/>
                                     <barButtonItem title="Dash Cam" id="JGA-sc-q4F"/>
                                     <barButtonItem width="100" style="plain" systemItem="fixedSpace" id="O3I-AI-rSl"/>
-                                    <barButtonItem image="BTN_Header_Hamburger2_NML.png" id="TBH-MP-HdO"/>
+                                    <barButtonItem image="BTN_NaviBar_Hamburger_NML.png" id="TBH-MP-HdO"/>
                                 </items>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WDq-OG-QAK">
@@ -69,9 +69,9 @@
                                     <barButtonItem width="139" style="plain" systemItem="fixedSpace" id="MAi-fw-Fml"/>
                                     <barButtonItem title="Dash Cam" id="oeX-cK-NcB"/>
                                     <barButtonItem width="55" style="plain" systemItem="fixedSpace" id="cbb-my-l5P"/>
-                                    <barButtonItem image="BTN_Header_Gallery2_NML.png" id="AJj-hu-8Ku"/>
+                                    <barButtonItem image="BTN_NaviBar_Gallery_NML.png" id="AJj-hu-8Ku"/>
                                     <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="VH6-Ay-A7R"/>
-                                    <barButtonItem image="BTN_Header_Hamburger2_NML.png" id="DTZ-9h-QK3"/>
+                                    <barButtonItem image="BTN_NaviBar_Hamburger_NML.png" id="DTZ-9h-QK3"/>
                                     <barButtonItem style="plain" systemItem="fixedSpace" id="xpF-NH-SXm"/>
                                 </items>
                             </toolbar>
@@ -119,9 +119,9 @@
                                     <barButtonItem width="84" style="plain" systemItem="fixedSpace" id="jww-lC-jhy"/>
                                     <barButtonItem title="Dash Cam" id="lh7-hF-Mkb"/>
                                     <barButtonItem width="55" style="plain" systemItem="fixedSpace" id="qn4-Vj-vdL"/>
-                                    <barButtonItem image="BTN_Header_Gallery2_NML.png" id="GsG-xb-fa3"/>
+                                    <barButtonItem image="BTN_NaviBar_Gallery_NML.png" id="GsG-xb-fa3"/>
                                     <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="dPT-uv-Hg8"/>
-                                    <barButtonItem image="BTN_Header_Hamburger2_NML.png" id="RdI-XS-JLy"/>
+                                    <barButtonItem image="BTN_NaviBar_Hamburger_NML.png" id="RdI-XS-JLy"/>
                                     <barButtonItem style="plain" systemItem="fixedSpace" id="av4-DP-Wvy"/>
                                 </items>
                             </toolbar>
@@ -162,9 +162,9 @@
                                     <barButtonItem width="139" style="plain" systemItem="fixedSpace" id="SdE-mm-pTn"/>
                                     <barButtonItem title="Dash Cam" id="NRN-vI-Rt7"/>
                                     <barButtonItem width="55" style="plain" systemItem="fixedSpace" id="2qW-it-qq1"/>
-                                    <barButtonItem image="BTN_Header_Gallery2_NML.png" id="cgk-Np-sxZ"/>
+                                    <barButtonItem image="BTN_NaviBar_Gallery_NML.png" id="cgk-Np-sxZ"/>
                                     <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="r4v-Hp-b0h"/>
-                                    <barButtonItem image="BTN_Header_Hamburger2_NML.png" id="Foa-pk-4qJ"/>
+                                    <barButtonItem image="BTN_NaviBar_Hamburger_NML.png" id="Foa-pk-4qJ"/>
                                     <barButtonItem style="plain" systemItem="fixedSpace" id="Y2e-EO-pYc"/>
                                 </items>
                             </toolbar>
@@ -277,8 +277,8 @@
         <scene sceneID="vQm-bQ-yhX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EC8-Ok-eqG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="EVENTS" id="kg6-xa-WvH">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
+                    <tabBarItem key="tabBarItem" title="EVENTS" image="BTN_Tab_Event_NML.png" id="kg6-xa-WvH">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nu9-8D-Z8u">
@@ -298,8 +298,8 @@
         <scene sceneID="6h2-ug-BIG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kD6-S6-jwk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ALL VIDEOS" id="GMt-Oz-uAf">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-16"/>
+                    <tabBarItem key="tabBarItem" title="ALL VIDEOS" image="BTN_Tab_AllVideo_NML.png" id="GMt-Oz-uAf">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DQ8-4b-tfo">
@@ -317,8 +317,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BTN_Header_Gallery2_NML.png" width="20" height="20"/>
-        <image name="BTN_Header_Hamburger2_NML.png" width="20" height="20"/>
+        <image name="BTN_NaviBar_Gallery_NML.png" width="22" height="22"/>
+        <image name="BTN_NaviBar_Hamburger_NML.png" width="22" height="12"/>
+        <image name="BTN_Tab_AllVideo_NML.png" width="31" height="28"/>
+        <image name="BTN_Tab_Event_NML.png" width="375" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="cIg-tv-2Iz"/>

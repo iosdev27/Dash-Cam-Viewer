@@ -25,8 +25,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-//    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"list@2x.png"]];
-//    [self.view addSubview:backgroundView];
     
     
     self.view.backgroundColor = [UIColor grayColor];
