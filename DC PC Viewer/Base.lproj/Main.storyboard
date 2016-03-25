@@ -320,7 +320,7 @@
         <image name="BTN_NaviBar_Gallery_NML.png" width="22" height="22"/>
         <image name="BTN_NaviBar_Hamburger_NML.png" width="22" height="12"/>
         <image name="BTN_Tab_AllVideo_NML.png" width="31" height="28"/>
-        <image name="BTN_Tab_Event_NML.png" width="375" height="100"/>
+        <image name="BTN_Tab_Event_NML.png" width="26" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="cIg-tv-2Iz"/>
