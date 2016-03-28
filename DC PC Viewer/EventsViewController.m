@@ -7,6 +7,7 @@
 //
 
 #import "EventsViewController.h"
+#import "MapVideoView.h"
 
 @interface EventsViewController ()
 
@@ -31,6 +32,7 @@
     eventsTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     eventsTableView.delegate = self;
     eventsTableView.dataSource = self;
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -61,9 +63,18 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     UIStoryboard *storyboard = self.navigationController.storyboard;
+
+//    MapVideoView *mVView = [[MapVideoView alloc]initWithFrame:CGRectMake(0,667/2, 375, 250)];
+//    MapVideoView *mVView = [[MapVideoView alloc]initWithFrame:CGRectMake(0,-200, 375, 250)];
+    MapVideoView *mVView = [[MapVideoView alloc]init];
+    [self.view addSubview:mVView];
     
-    MapAndVideoViewController *mapAndVideoVC = [storyboard instantiateViewControllerWithIdentifier:@"MapVideoVCID"];
-    [self.navigationController pushViewController:mapAndVideoVC animated:YES];    
+//    MapAndVideoViewController *mapAndVideoVC = [storyboard instantiateViewControllerWithIdentifier:@"MapVideoVCID"];
+//    if (mapAndVideoVC.view != nil) {
+//        [self.view addSubview:mapAndVideoVC.view];
+//    }
+    
+//    [self.navigationController pushViewController:mapAndVideoVC animated:YES];    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

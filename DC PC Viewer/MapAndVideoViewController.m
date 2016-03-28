@@ -20,8 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    SWRevealViewController *revealViewController = self.revealViewController;
+    
+    if (revealViewController) {
+        [self.menuBarButtonItem setTarget:self.revealViewController];
+        [self.menuBarButtonItem setAction:@selector(rightRevealToggle:)];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+    
     AVPlayerViewController *avpController = [[AVPlayerViewController alloc]init];
-    avpController.view.frame = CGRectMake(0,667/2, 375, 250);
+    avpController.view.frame = CGRectMake(0,335, 375, 250);
     [self addChildViewController:avpController];
     [self.view addSubview:avpController.view];
     
@@ -76,7 +84,8 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:YES];
+    [super viewDidAppear:animated];
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     self.locationManager.distanceFilter = kCLDistanceFilterNone;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;

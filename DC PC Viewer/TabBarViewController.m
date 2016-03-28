@@ -31,6 +31,13 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+}
+
+
+
+
 -(NSUInteger)supportedInterfaceOrientations
 {
     if (self.selectedViewController)

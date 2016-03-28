@@ -88,6 +88,9 @@
     
     if (indexPath.row == 1 || indexPath.row == 2) {
         UITabBarController *tabBarController = (UITabBarController*)self.revealViewController.frontViewController;
+        UINavigationController *navController = tabBarController.viewControllers[(indexPath.row)-1];
+        [navController popToRootViewControllerAnimated:YES];
+        
         tabBarController.selectedIndex = (indexPath.row)-1;
         [self.revealViewController pushFrontViewController:tabBarController animated:YES];
     }

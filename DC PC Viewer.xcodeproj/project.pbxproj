@@ -55,6 +55,12 @@
 		06A046E21CA4B09C00CA12FE /* SAMPLE_Event4Gallery@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A046BF1CA4B09C00CA12FE /* SAMPLE_Event4Gallery@2x.png */; };
 		06A046E31CA4B09C00CA12FE /* SAMPLE_gallery_thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A046C01CA4B09C00CA12FE /* SAMPLE_gallery_thumbnail@2x.png */; };
 		06A046E41CA4B09C00CA12FE /* SAMPLE_Thumbnail4List@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A046C11CA4B09C00CA12FE /* SAMPLE_Thumbnail4List@2x.png */; };
+		06A046E71CA5B37F00CA12FE /* MapVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A046E61CA5B37F00CA12FE /* MapVideoView.m */; };
+		06A046E91CA5ED4300CA12FE /* IMG_Play Chapter_Analytics.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A046E81CA5ED4300CA12FE /* IMG_Play Chapter_Analytics.png */; };
+		06A046EB1CA606FB00CA12FE /* Chapter Analytics 60px.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A046EA1CA606FB00CA12FE /* Chapter Analytics 60px.png */; };
+		06A046ED1CA608C400CA12FE /* Chapter Analytics 50.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A046EC1CA608C400CA12FE /* Chapter Analytics 50.png */; };
+		06A046EF1CA608D600CA12FE /* Chapter Analytics40.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A046EE1CA608D600CA12FE /* Chapter Analytics40.png */; };
+		06A046F11CA60BEA00CA12FE /* Chapter Analytics True 40.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A046F01CA60BEA00CA12FE /* Chapter Analytics True 40.png */; };
 		06C79D651C90A2DD0043926E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C79D641C90A2DD0043926E /* SystemConfiguration.framework */; };
 		06C79D6A1C90AA170043926E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79D691C90AA170043926E /* Reachability.m */; };
 		06C79D6E1C90D86A0043926E /* SDCardConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79D6C1C90D86A0043926E /* SDCardConnectionViewController.m */; };
@@ -194,6 +200,13 @@
 		06A046BF1CA4B09C00CA12FE /* SAMPLE_Event4Gallery@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SAMPLE_Event4Gallery@2x.png"; sourceTree = "<group>"; };
 		06A046C01CA4B09C00CA12FE /* SAMPLE_gallery_thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SAMPLE_gallery_thumbnail@2x.png"; sourceTree = "<group>"; };
 		06A046C11CA4B09C00CA12FE /* SAMPLE_Thumbnail4List@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SAMPLE_Thumbnail4List@2x.png"; sourceTree = "<group>"; };
+		06A046E51CA5B37F00CA12FE /* MapVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapVideoView.h; sourceTree = "<group>"; };
+		06A046E61CA5B37F00CA12FE /* MapVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapVideoView.m; sourceTree = "<group>"; };
+		06A046E81CA5ED4300CA12FE /* IMG_Play Chapter_Analytics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "IMG_Play Chapter_Analytics.png"; path = "Parts Revised/IMG_Play Chapter_Analytics.png"; sourceTree = "<group>"; };
+		06A046EA1CA606FB00CA12FE /* Chapter Analytics 60px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chapter Analytics 60px.png"; sourceTree = "<group>"; };
+		06A046EC1CA608C400CA12FE /* Chapter Analytics 50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chapter Analytics 50.png"; sourceTree = "<group>"; };
+		06A046EE1CA608D600CA12FE /* Chapter Analytics40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chapter Analytics40.png"; sourceTree = "<group>"; };
+		06A046F01CA60BEA00CA12FE /* Chapter Analytics True 40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chapter Analytics True 40.png"; sourceTree = "<group>"; };
 		06C79D641C90A2DD0043926E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		06C79D681C90AA170043926E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		06C79D691C90AA170043926E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -381,6 +394,8 @@
 				062021781C8E33FA00A04034 /* Info.plist */,
 				062021701C8E33FA00A04034 /* DC_PC_Viewer.xcdatamodeld */,
 				062021641C8E33FA00A04034 /* Supporting Files */,
+				06A046E51CA5B37F00CA12FE /* MapVideoView.h */,
+				06A046E61CA5B37F00CA12FE /* MapVideoView.m */,
 			);
 			path = "DC PC Viewer";
 			sourceTree = "<group>";
@@ -458,6 +473,11 @@
 		06975AB61C8F913300139433 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				06A046F01CA60BEA00CA12FE /* Chapter Analytics True 40.png */,
+				06A046EE1CA608D600CA12FE /* Chapter Analytics40.png */,
+				06A046EC1CA608C400CA12FE /* Chapter Analytics 50.png */,
+				06A046EA1CA606FB00CA12FE /* Chapter Analytics 60px.png */,
+				06A046E81CA5ED4300CA12FE /* IMG_Play Chapter_Analytics.png */,
 				06A0469D1CA4B09C00CA12FE /* Parts Revised */,
 			);
 			name = Assets;
@@ -778,6 +798,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06A046EF1CA608D600CA12FE /* Chapter Analytics40.png in Resources */,
 				06C79EA61C9891790043926E /* TCI_1.MP4 in Resources */,
 				06A046CC1CA4B09C00CA12FE /* DCV_002.PNG in Resources */,
 				06A046DB1CA4B09C00CA12FE /* IMG_Gallery_overlay4text@2x.png in Resources */,
@@ -786,6 +807,7 @@
 				062021771C8E33FA00A04034 /* LaunchScreen.storyboard in Resources */,
 				06A046DD1CA4B09C00CA12FE /* LIST_Chpt_NML@2x.png in Resources */,
 				06A046D91CA4B09C00CA12FE /* IMG_Gallery_BasePlate@2x.png in Resources */,
+				06A046EB1CA606FB00CA12FE /* Chapter Analytics 60px.png in Resources */,
 				06A046DC1CA4B09C00CA12FE /* IMG_Tab_Base@2x.png in Resources */,
 				06A046DE1CA4B09C00CA12FE /* LIST_ChptLock_New_NML@2x.png in Resources */,
 				06A046C81CA4B09C00CA12FE /* BTN_Tab_AllVideo_NML@2x.png in Resources */,
@@ -799,6 +821,7 @@
 				06A046D21CA4B09C00CA12FE /* DCV_SAVE.png in Resources */,
 				06A046D81CA4B09C00CA12FE /* ONS_007.png in Resources */,
 				06A046D41CA4B09C00CA12FE /* DCV_TModal.png in Resources */,
+				06A046F11CA60BEA00CA12FE /* Chapter Analytics True 40.png in Resources */,
 				06A046CF1CA4B09C00CA12FE /* DCV_007.png in Resources */,
 				06A046E41CA4B09C00CA12FE /* SAMPLE_Thumbnail4List@2x.png in Resources */,
 				06A046C31CA4B09C00CA12FE /* BTN_Gallery_EventLock_NML@2x.png in Resources */,
@@ -806,11 +829,13 @@
 				062021741C8E33FA00A04034 /* Assets.xcassets in Resources */,
 				06A046D11CA4B09C00CA12FE /* DCV_hwReset.png in Resources */,
 				06A046C61CA4B09C00CA12FE /* BTN_NaviBar_Gallery_NML@2x.png in Resources */,
+				06A046ED1CA608C400CA12FE /* Chapter Analytics 50.png in Resources */,
 				06A046C71CA4B09C00CA12FE /* BTN_NaviBar_Hamburger_NML@2x.png in Resources */,
 				06A046CD1CA4B09C00CA12FE /* DCV_005.png in Resources */,
 				06A046D61CA4B09C00CA12FE /* ONS_001.PNG in Resources */,
 				06A046CB1CA4B09C00CA12FE /* BTN_Tab_Event_SEL@2x.png in Resources */,
 				06A046CA1CA4B09C00CA12FE /* BTN_Tab_Event_NML@2x.png in Resources */,
+				06A046E91CA5ED4300CA12FE /* IMG_Play Chapter_Analytics.png in Resources */,
 				06A046DF1CA4B09C00CA12FE /* LIST_ChptLock_OLD_NML@2x.png in Resources */,
 				06A046E21CA4B09C00CA12FE /* SAMPLE_Event4Gallery@2x.png in Resources */,
 				06A046D71CA4B09C00CA12FE /* ONS_006.png in Resources */,
@@ -900,6 +925,7 @@
 				06C79E731C933F940043926E /* CEBaseInteractionController.m in Sources */,
 				06C79E2A1C910C1B0043926E /* DGActivityIndicatorLineScalePulseOutRapidAnimation.m in Sources */,
 				06C79E271C910C1B0043926E /* DGActivityIndicatorLineScaleAnimation.m in Sources */,
+				06A046E71CA5B37F00CA12FE /* MapVideoView.m in Sources */,
 				06C79E241C910C1B0043926E /* DGActivityIndicatorCookieTerminatorAnimation.m in Sources */,
 				06C79E261C910C1B0043926E /* DGActivityIndicatorFiveDotsAnimation.m in Sources */,
 				06C79E301C910C1B0043926E /* DGActivityIndicatorTriangleSkewSpinAnimation.m in Sources */,

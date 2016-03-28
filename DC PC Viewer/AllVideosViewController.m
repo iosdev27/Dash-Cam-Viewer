@@ -63,6 +63,8 @@
 }
 */
 
+
+
 #pragma mark - allViedosTableView methods
 
 //manage datasource and  delegate for submenu tableview
@@ -99,8 +101,9 @@
     UIStoryboard *storyboard = self.navigationController.storyboard;
     
     MapAndVideoViewController *mapAndVideoVC = [storyboard instantiateViewControllerWithIdentifier:@"MapVideoVCID"];
+    self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:mapAndVideoVC animated:YES];
-
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
