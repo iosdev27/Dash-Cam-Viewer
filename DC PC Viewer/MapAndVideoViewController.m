@@ -10,12 +10,68 @@
 @import AVFoundation;
 @import AVKit;
 
-@interface MapAndVideoViewController ()
+@interface MapAndVideoViewController () {
+    AVPlayerViewController *avpController;
+    AVPlayer *myPlayer;
+}
 
 @end
 
 @implementation MapAndVideoViewController
 @synthesize tripMapView;
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 5;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *uvc = [collectionView dequeueReusableCellWithReuseIdentifier:@"VideoCell" forIndexPath:indexPath];
+    uvc.backgroundColor = [UIColor whiteColor];
+    
+   // UIImageView *thumbnailImageForCell = [[UIImageView alloc]initWithFrame:CGRectMake(15,7,78,56)];
+    UIImageView *thumbnailImageForCell = [[UIImageView alloc]init];
+    thumbnailImageForCell.image = [UIImage imageNamed:@"IMG_ Play Chapter_ThisChapterScreenshot.png"];
+
+    
+    [uvc setBackgroundView:thumbnailImageForCell];
+    return uvc;
+}
+
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(150, 150);
+}
+
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    UIImageView *thumbnailImageForCell = [[UIImageView alloc]init];
+    thumbnailImageForCell.image = [UIImage imageNamed:@"IMG_Play Event_This Event THUMB.png"];
+    
+    [cell setBackgroundView:thumbnailImageForCell];
+    
+    
+    NSURL *videoURL = [[NSBundle mainBundle]URLForResource:@"TCI_1" withExtension:@"MP4"];
+    myPlayer = [AVPlayer playerWithURL:videoURL];
+    
+    avpController.player = myPlayer;
+    [myPlayer play];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    UIImageView *thumbnailImageForCell = [[UIImageView alloc]init];
+    thumbnailImageForCell.image = [UIImage imageNamed:@"IMG_ Play Chapter_ThisChapterScreenshot.png"];
+    
+    [cell setBackgroundView:thumbnailImageForCell];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,28 +84,15 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     
-    AVPlayerViewController *avpController = [[AVPlayerViewController alloc]init];
-    avpController.view.frame = CGRectMake(0,335, 375, 250);
-    [self addChildViewController:avpController];
-    [self.view addSubview:avpController.view];
+    [self zoomIntoMap];
     
-    AVPlayer *myPlayer;
-    
-    
-//    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"vid" ofType:@"mp4"];
-//    NSURL *fileURL = [NSURL fileURLWithPath:filepath];
-//    myPlayer = [AVPlayer playerWithURL:fileURL];
+    [self createPlayer];
     
     NSURL *videoURL = [[NSBundle mainBundle]URLForResource:@"TCI_1" withExtension:@"MP4"];
     myPlayer = [AVPlayer playerWithURL:videoURL];
   
     avpController.player = myPlayer;
-    [myPlayer play];
-    
-    
-    
-    
-//    avpController.view.frame = self.view.frame;
+
     
     
     //location services check
@@ -81,6 +124,22 @@
     [tripMapView setZoomEnabled:YES];
     [tripMapView setScrollEnabled:YES];
 //    [tripMapView setCenterCoordinate:tripMapView.userLocation.location.coordinate animated:YES];
+    
+    
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+    [flowLayout setMinimumInteritemSpacing:0.0f];
+    [self.videoFramesScrollListCollectionView setCollectionViewLayout:flowLayout];
+    
+    self.videoFramesScrollListCollectionView.frame = CGRectMake(0, (avpController.view.frame.origin.y + avpController.view.frame.size.height), self.view.frame.size.width, (self.view.frame.size.height - (avpController.view.frame.origin.y + avpController.view.frame.size.height)));
+//    NSLog(@"scroll y:%f", self.videoFramesScrollListCollectionView.frame.view.size.height);
+}
+
+- (void)createPlayer {
+    avpController = [[AVPlayerViewController alloc]init];
+    avpController.view.frame = CGRectMake(0,335, self.view.frame.size.width, 250);
+    [self addChildViewController:avpController];
+    [self.view addSubview:avpController.view];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -104,6 +163,26 @@
     region.span.longitudeDelta = 3;
     [tripMapView setRegion:region animated:YES];
 //
+}
+
+// viewDidAppear is not getting called so duplipcating functionality
+- (void)zoomIntoMap {
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [self.locationManager startUpdatingLocation];
+    
+    NSLog(@"%@", [self deviceLocation]);
+    
+    //View Area
+    MKCoordinateRegion region = { { 0.0, 0.0 }, { 0.0, 0.0 } };
+    
+    //    region.center.latitude = self.locationManager.location.coordinate.latitude;
+    //    region.center.longitude = self.locationManager.location.coordinate.longitude;
+    region.center.latitude = 43.7816477;
+    region.center.longitude = -79.24443839999998;
+    region.span.longitudeDelta = 3; //.005
+    region.span.longitudeDelta = 3;
+    [tripMapView setRegion:region animated:YES];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {

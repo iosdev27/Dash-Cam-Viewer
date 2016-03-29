@@ -12,12 +12,13 @@
 #import "SWRevealViewController.h"
 
 
-@interface MapAndVideoViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
+@interface MapAndVideoViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet MKMapView *tripMapView;
 @property(nonatomic, strong) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButtonItem;
+@property (weak, nonatomic) IBOutlet UICollectionView *videoFramesScrollListCollectionView;
 
 -(IBAction)backButtonPressed:(id)sender;
 

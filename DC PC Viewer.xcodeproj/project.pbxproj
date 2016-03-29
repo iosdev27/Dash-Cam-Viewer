@@ -61,6 +61,9 @@
 		06A046ED1CA608C400CA12FE /* Chapter Analytics 50.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A046EC1CA608C400CA12FE /* Chapter Analytics 50.png */; };
 		06A046EF1CA608D600CA12FE /* Chapter Analytics40.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A046EE1CA608D600CA12FE /* Chapter Analytics40.png */; };
 		06A046F11CA60BEA00CA12FE /* Chapter Analytics True 40.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A046F01CA60BEA00CA12FE /* Chapter Analytics True 40.png */; };
+		06A046FC1CAA175200CA12FE /* VideoFrameCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A046FB1CAA175200CA12FE /* VideoFrameCollectionViewCell.m */; };
+		06A046FE1CAAEBA100CA12FE /* IMG_ Play Chapter_ThisChapterScreenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A046FD1CAAEBA100CA12FE /* IMG_ Play Chapter_ThisChapterScreenshot.png */; };
+		06A047001CAAF82400CA12FE /* IMG_Play Event_This Event THUMB.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A046FF1CAAF82400CA12FE /* IMG_Play Event_This Event THUMB.png */; };
 		06C79D651C90A2DD0043926E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C79D641C90A2DD0043926E /* SystemConfiguration.framework */; };
 		06C79D6A1C90AA170043926E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79D691C90AA170043926E /* Reachability.m */; };
 		06C79D6E1C90D86A0043926E /* SDCardConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79D6C1C90D86A0043926E /* SDCardConnectionViewController.m */; };
@@ -207,6 +210,10 @@
 		06A046EC1CA608C400CA12FE /* Chapter Analytics 50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chapter Analytics 50.png"; sourceTree = "<group>"; };
 		06A046EE1CA608D600CA12FE /* Chapter Analytics40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chapter Analytics40.png"; sourceTree = "<group>"; };
 		06A046F01CA60BEA00CA12FE /* Chapter Analytics True 40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chapter Analytics True 40.png"; sourceTree = "<group>"; };
+		06A046FA1CAA175200CA12FE /* VideoFrameCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoFrameCollectionViewCell.h; sourceTree = "<group>"; };
+		06A046FB1CAA175200CA12FE /* VideoFrameCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoFrameCollectionViewCell.m; sourceTree = "<group>"; };
+		06A046FD1CAAEBA100CA12FE /* IMG_ Play Chapter_ThisChapterScreenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IMG_ Play Chapter_ThisChapterScreenshot.png"; sourceTree = "<group>"; };
+		06A046FF1CAAF82400CA12FE /* IMG_Play Event_This Event THUMB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IMG_Play Event_This Event THUMB.png"; sourceTree = "<group>"; };
 		06C79D641C90A2DD0043926E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		06C79D681C90AA170043926E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		06C79D691C90AA170043926E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -396,6 +403,8 @@
 				062021641C8E33FA00A04034 /* Supporting Files */,
 				06A046E51CA5B37F00CA12FE /* MapVideoView.h */,
 				06A046E61CA5B37F00CA12FE /* MapVideoView.m */,
+				06A046FA1CAA175200CA12FE /* VideoFrameCollectionViewCell.h */,
+				06A046FB1CAA175200CA12FE /* VideoFrameCollectionViewCell.m */,
 			);
 			path = "DC PC Viewer";
 			sourceTree = "<group>";
@@ -473,6 +482,8 @@
 		06975AB61C8F913300139433 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				06A046FF1CAAF82400CA12FE /* IMG_Play Event_This Event THUMB.png */,
+				06A046FD1CAAEBA100CA12FE /* IMG_ Play Chapter_ThisChapterScreenshot.png */,
 				06A046F01CA60BEA00CA12FE /* Chapter Analytics True 40.png */,
 				06A046EE1CA608D600CA12FE /* Chapter Analytics40.png */,
 				06A046EC1CA608C400CA12FE /* Chapter Analytics 50.png */,
@@ -810,10 +821,12 @@
 				06A046EB1CA606FB00CA12FE /* Chapter Analytics 60px.png in Resources */,
 				06A046DC1CA4B09C00CA12FE /* IMG_Tab_Base@2x.png in Resources */,
 				06A046DE1CA4B09C00CA12FE /* LIST_ChptLock_New_NML@2x.png in Resources */,
+				06A046FE1CAAEBA100CA12FE /* IMG_ Play Chapter_ThisChapterScreenshot.png in Resources */,
 				06A046C81CA4B09C00CA12FE /* BTN_Tab_AllVideo_NML@2x.png in Resources */,
 				06A046E01CA4B09C00CA12FE /* LIST_Trip_NML@2x.png in Resources */,
 				06A046D01CA4B09C00CA12FE /* DCV_008.png in Resources */,
 				06A046E11CA4B09C00CA12FE /* LIST_TripLock_NML@2x.png in Resources */,
+				06A047001CAAF82400CA12FE /* IMG_Play Event_This Event THUMB.png in Resources */,
 				06A046E31CA4B09C00CA12FE /* SAMPLE_gallery_thumbnail@2x.png in Resources */,
 				06A046D31CA4B09C00CA12FE /* DCV_SET.png in Resources */,
 				06A046C41CA4B09C00CA12FE /* BTN_Gallery_EventShare_NML@2x.png in Resources */,
@@ -916,6 +929,7 @@
 			files = (
 				06C79E1C1C910C1B0043926E /* DGActivityIndicatorBallScaleAnimation.m in Sources */,
 				06C79E171C910C1B0043926E /* DGActivityIndicatorBallGridBeatAnimation.m in Sources */,
+				06A046FC1CAA175200CA12FE /* VideoFrameCollectionViewCell.m in Sources */,
 				06C79E181C910C1B0043926E /* DGActivityIndicatorBallGridPulseAnimation.m in Sources */,
 				06C79E9B1C9342840043926E /* CETurnAnimationController.m in Sources */,
 				06C79E2C1C910C1B0043926E /* DGActivityIndicatorRotatingSandglassAnimation.m in Sources */,
