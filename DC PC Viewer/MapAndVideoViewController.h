@@ -19,7 +19,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButtonItem;
 @property (weak, nonatomic) IBOutlet UICollectionView *videoFramesScrollListCollectionView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *shareButton;
 
+- (IBAction)shareButtonPressed:(id)sender;
 -(IBAction)backButtonPressed:(id)sender;
 
 @end

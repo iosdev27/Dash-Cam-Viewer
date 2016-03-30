@@ -19,6 +19,27 @@
 
 @synthesize allVideosTableView;
 
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 3;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *uvc = [collectionView dequeueReusableCellWithReuseIdentifier:@"VideoCell" forIndexPath:indexPath];
+    uvc.backgroundColor = [UIColor whiteColor];
+    
+    // UIImageView *thumbnailImageForCell = [[UIImageView alloc]initWithFrame:CGRectMake(15,7,78,56)];
+    UIImageView *thumbnailImageForCell = [[UIImageView alloc]init];
+    thumbnailImageForCell.image = [UIImage imageNamed:@"IMG_ Play Chapter_ThisChapterScreenshot.png"];
+    
+    
+    [uvc setBackgroundView:thumbnailImageForCell];
+    return uvc;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -39,7 +60,33 @@
     allVideosTableView.dataSource = self;
     
     [allVideosTableView openSection:0 animated:NO];
+    self.galleryCollectionView.hidden = YES;
+    [self.listBarButtonItem setEnabled:NO];
     
+//    NSArray *items = [self.localToolBar items];
+//    for (UIBarButtonItem *barButton in items) {
+//        //do something with button
+//        if (barButton.tag == 2) {
+//            [self.localToolBar removeObj]
+//        }
+//    }
+    
+}
+
+- (IBAction)listBTNClicked:(id)sender {
+    [self.listBarButtonItem setEnabled:NO];
+    [self.galleryBarButtonItem setEnabled:YES];
+    self.galleryCollectionView.hidden = YES;
+    self.allVideosTableView.hidden = NO;
+}
+
+- (IBAction)galleryViewBarButtonItem:(id)sender {
+    allVideosTableView.hidden = YES;
+    [self.listBarButtonItem setEnabled:YES];
+    
+    [self.galleryBarButtonItem setEnabled:NO];
+    self.galleryCollectionView.frame = CGRectMake(allVideosTableView.frame.origin.x, allVideosTableView.frame.origin.y, self.view.frame.size.width, allVideosTableView.frame.size.height);
+    self.galleryCollectionView.hidden = NO;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -129,7 +176,6 @@
 - (void)sectionButtonTouchUpInside:(UIButton*)sender {
     [self.allVideosTableView toggleSection:sender.tag animated:YES];
 }
-
 
 
 @end

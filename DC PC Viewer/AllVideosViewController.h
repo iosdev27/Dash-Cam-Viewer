@@ -12,15 +12,19 @@
 #import "MapAndVideoViewController.h"
 #import "STCollapseTableView.h"
 
-@interface AllVideosViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+@interface AllVideosViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> {
 
 }
 
-//@property (weak, nonatomic) IBOutlet UIToolbar *navigationToolBar;
+@property (weak, nonatomic) IBOutlet UIToolbar *localToolBar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButtonItem;
 //@property (weak, nonatomic) IBOutlet UITableView *allVideosTableView;
 @property (weak, nonatomic) IBOutlet STCollapseTableView *allVideosTableView;
+@property (weak, nonatomic) IBOutlet UICollectionView *galleryCollectionView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *listBarButtonItem;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *galleryBarButtonItem;
 
-
+- (IBAction)listBTNClicked:(id)sender;
+- (IBAction)galleryViewBarButtonItem:(id)sender;
 
 @end

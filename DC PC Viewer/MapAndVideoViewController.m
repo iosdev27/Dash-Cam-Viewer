@@ -223,6 +223,27 @@
 }
 */
 
+- (IBAction)shareButtonPressed:(id)sender {
+//    NSString *textToShare = @"Look at this awesome website for aspiring iOS Developers!";
+//    NSURL *myWebsite = [NSURL URLWithString:@"http://www.codingexplorer.com/"];
+    NSURL *videoURL = [[NSBundle mainBundle]URLForResource:@"TCI_1" withExtension:@"MP4"];
+    
+    NSArray *objectsToShare = @[videoURL];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+    
+    NSArray *excludeActivities = @[UIActivityTypeAirDrop,
+                                   UIActivityTypePrint,
+                                   UIActivityTypeAssignToContact,
+                                   UIActivityTypeAddToReadingList,
+                                   UIActivityTypePostToFlickr,
+                                   UIActivityTypePostToVimeo];
+    
+    activityVC.excludedActivityTypes = excludeActivities;
+    
+    [self presentViewController:activityVC animated:YES completion:nil];
+}
+
 - (IBAction)backButtonPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }

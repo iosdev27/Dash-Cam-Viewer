@@ -64,6 +64,7 @@
 		06A046FC1CAA175200CA12FE /* VideoFrameCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A046FB1CAA175200CA12FE /* VideoFrameCollectionViewCell.m */; };
 		06A046FE1CAAEBA100CA12FE /* IMG_ Play Chapter_ThisChapterScreenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A046FD1CAAEBA100CA12FE /* IMG_ Play Chapter_ThisChapterScreenshot.png */; };
 		06A047001CAAF82400CA12FE /* IMG_Play Event_This Event THUMB.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A046FF1CAAF82400CA12FE /* IMG_Play Event_This Event THUMB.png */; };
+		06A0475F1CAB6FB700CA12FE /* VideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A0475E1CAB6FB700CA12FE /* VideoCollectionViewCell.m */; };
 		06C79D651C90A2DD0043926E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C79D641C90A2DD0043926E /* SystemConfiguration.framework */; };
 		06C79D6A1C90AA170043926E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79D691C90AA170043926E /* Reachability.m */; };
 		06C79D6E1C90D86A0043926E /* SDCardConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79D6C1C90D86A0043926E /* SDCardConnectionViewController.m */; };
@@ -214,6 +215,8 @@
 		06A046FB1CAA175200CA12FE /* VideoFrameCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoFrameCollectionViewCell.m; sourceTree = "<group>"; };
 		06A046FD1CAAEBA100CA12FE /* IMG_ Play Chapter_ThisChapterScreenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IMG_ Play Chapter_ThisChapterScreenshot.png"; sourceTree = "<group>"; };
 		06A046FF1CAAF82400CA12FE /* IMG_Play Event_This Event THUMB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IMG_Play Event_This Event THUMB.png"; sourceTree = "<group>"; };
+		06A0475D1CAB6FB700CA12FE /* VideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCollectionViewCell.h; sourceTree = "<group>"; };
+		06A0475E1CAB6FB700CA12FE /* VideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCollectionViewCell.m; sourceTree = "<group>"; };
 		06C79D641C90A2DD0043926E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		06C79D681C90AA170043926E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		06C79D691C90AA170043926E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -412,6 +415,8 @@
 		062021641C8E33FA00A04034 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				06A0475D1CAB6FB700CA12FE /* VideoCollectionViewCell.h */,
+				06A0475E1CAB6FB700CA12FE /* VideoCollectionViewCell.m */,
 				062021651C8E33FA00A04034 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -950,6 +955,7 @@
 				06C79E141C910C1B0043926E /* DGActivityIndicatorBallClipRotateAnimation.m in Sources */,
 				06C79E331C910C1B0043926E /* DGActivityIndicatorTwoDotsAnimation.m in Sources */,
 				06C79E191C910C1B0043926E /* DGActivityIndicatorBallPulseAnimation.m in Sources */,
+				06A0475F1CAB6FB700CA12FE /* VideoCollectionViewCell.m in Sources */,
 				06C79E991C9342840043926E /* CEPortalAnimationController.m in Sources */,
 				06C79E251C910C1B0043926E /* DGActivityIndicatorDoubleBounceAnimation.m in Sources */,
 				06C79E941C9342840043926E /* CEExplodeAnimationController.m in Sources */,
