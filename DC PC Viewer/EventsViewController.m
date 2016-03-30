@@ -66,15 +66,17 @@
 
 //    MapVideoView *mVView = [[MapVideoView alloc]initWithFrame:CGRectMake(0,667/2, 375, 250)];
 //    MapVideoView *mVView = [[MapVideoView alloc]initWithFrame:CGRectMake(0,-200, 375, 250)];
-    MapVideoView *mVView = [[MapVideoView alloc]init];
-    [self.view addSubview:mVView];
+//    MapVideoView *mVView = [[MapVideoView alloc]init];
+//    [self.view addSubview:mVView];
     
-//    MapAndVideoViewController *mapAndVideoVC = [storyboard instantiateViewControllerWithIdentifier:@"MapVideoVCID"];
+    MapAndVideoViewController *mapAndVideoVC = [storyboard instantiateViewControllerWithIdentifier:@"MapVideoVCID"];
 //    if (mapAndVideoVC.view != nil) {
 //        [self.view addSubview:mapAndVideoVC.view];
 //    }
     
-//    [self.navigationController pushViewController:mapAndVideoVC animated:YES];    
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:mapAndVideoVC animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

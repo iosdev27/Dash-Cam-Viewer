@@ -94,6 +94,11 @@
         tabBarController.selectedIndex = (indexPath.row)-1;
         [self.revealViewController pushFrontViewController:tabBarController animated:YES];
     }
+    
+    if (indexPath.row == 3) {
+        SettingsViewController *settingsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsVCID"];
+        [self.navigationController pushViewController:settingsVC animated:YES];
+    }
 }
 
 - (void)didChangeSegmentedControl:(UISegmentedControl *)control {

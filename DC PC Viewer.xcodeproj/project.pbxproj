@@ -65,6 +65,8 @@
 		06A046FE1CAAEBA100CA12FE /* IMG_ Play Chapter_ThisChapterScreenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A046FD1CAAEBA100CA12FE /* IMG_ Play Chapter_ThisChapterScreenshot.png */; };
 		06A047001CAAF82400CA12FE /* IMG_Play Event_This Event THUMB.png in Resources */ = {isa = PBXBuildFile; fileRef = 06A046FF1CAAF82400CA12FE /* IMG_Play Event_This Event THUMB.png */; };
 		06A0475F1CAB6FB700CA12FE /* VideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A0475E1CAB6FB700CA12FE /* VideoCollectionViewCell.m */; };
+		06A047621CAC4BA300CA12FE /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A047611CAC4BA300CA12FE /* SettingsViewController.m */; };
+		06A047651CAC689A00CA12FE /* TimeZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A047641CAC689A00CA12FE /* TimeZoneViewController.m */; };
 		06C79D651C90A2DD0043926E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C79D641C90A2DD0043926E /* SystemConfiguration.framework */; };
 		06C79D6A1C90AA170043926E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79D691C90AA170043926E /* Reachability.m */; };
 		06C79D6E1C90D86A0043926E /* SDCardConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79D6C1C90D86A0043926E /* SDCardConnectionViewController.m */; };
@@ -217,6 +219,11 @@
 		06A046FF1CAAF82400CA12FE /* IMG_Play Event_This Event THUMB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IMG_Play Event_This Event THUMB.png"; sourceTree = "<group>"; };
 		06A0475D1CAB6FB700CA12FE /* VideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCollectionViewCell.h; sourceTree = "<group>"; };
 		06A0475E1CAB6FB700CA12FE /* VideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCollectionViewCell.m; sourceTree = "<group>"; };
+		06A047601CAC4BA300CA12FE /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		06A047611CAC4BA300CA12FE /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		06A047631CAC689A00CA12FE /* TimeZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeZoneViewController.h; sourceTree = "<group>"; };
+		06A047641CAC689A00CA12FE /* TimeZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeZoneViewController.m; sourceTree = "<group>"; };
+		06A047661CAC78DE00CA12FE /* timezoneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timezoneDelegate.h; sourceTree = "<group>"; };
 		06C79D641C90A2DD0043926E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		06C79D681C90AA170043926E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		06C79D691C90AA170043926E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -408,6 +415,7 @@
 				06A046E61CA5B37F00CA12FE /* MapVideoView.m */,
 				06A046FA1CAA175200CA12FE /* VideoFrameCollectionViewCell.h */,
 				06A046FB1CAA175200CA12FE /* VideoFrameCollectionViewCell.m */,
+				06A047661CAC78DE00CA12FE /* timezoneDelegate.h */,
 			);
 			path = "DC PC Viewer";
 			sourceTree = "<group>";
@@ -459,6 +467,10 @@
 				06C79EAB1C98DCB00043926E /* HamMenuViewController.m */,
 				0638E6731CA07D5A006EED5B /* SubClassofSWRevealViewController.h */,
 				0638E6741CA07D5A006EED5B /* SubClassofSWRevealViewController.m */,
+				06A047601CAC4BA300CA12FE /* SettingsViewController.h */,
+				06A047611CAC4BA300CA12FE /* SettingsViewController.m */,
+				06A047631CAC689A00CA12FE /* TimeZoneViewController.h */,
+				06A047641CAC689A00CA12FE /* TimeZoneViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -995,6 +1007,8 @@
 				06C79E211C910C1B0043926E /* DGActivityIndicatorBallTrianglePathAnimation.m in Sources */,
 				06C79D6E1C90D86A0043926E /* SDCardConnectionViewController.m in Sources */,
 				06C79E281C910C1B0043926E /* DGActivityIndicatorLineScalePartyAnimation.m in Sources */,
+				06A047621CAC4BA300CA12FE /* SettingsViewController.m in Sources */,
+				06A047651CAC689A00CA12FE /* TimeZoneViewController.m in Sources */,
 				06975AB51C8E682B00139433 /* SWRevealViewController.m in Sources */,
 				06C79E761C933F940043926E /* CEVerticalSwipeInteractionController.m in Sources */,
 			);
