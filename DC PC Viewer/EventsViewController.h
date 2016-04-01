@@ -14,5 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButtonItem;
 @property (weak, nonatomic) IBOutlet UITableView *eventsTableView;
+@property (weak, nonatomic) IBOutlet UIToolbar *localToolBar;
 
 @end

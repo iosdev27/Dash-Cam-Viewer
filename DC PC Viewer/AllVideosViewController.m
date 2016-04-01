@@ -110,6 +110,7 @@ BOOL GalleryBTNView = YES;
     dashCamLabel.frame = CGRectMake(0, 0, 80, 22);
     [dashCamLabel setCenter:self.view.center];
     dashCamLabel.text = @"Dash Cam";
+//    dashCamLabel.textColor = [UIColor lightBlueColor];
     UIBarButtonItem *title = [[UIBarButtonItem alloc] initWithCustomView:dashCamLabel];
     
     [BarbuttonsArray addObject:title];

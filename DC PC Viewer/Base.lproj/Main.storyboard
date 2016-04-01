@@ -39,6 +39,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="eventsTableView" destination="WDq-OG-QAK" id="1AL-ep-9nI"/>
+                        <outlet property="localToolBar" destination="ka7-eG-le6" id="35z-u5-xok"/>
                         <outlet property="menuBarButtonItem" destination="TBH-MP-HdO" id="ZiU-Ts-aUn"/>
                     </connections>
                 </viewController>
@@ -181,10 +182,10 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N5M-pe-0Fd">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="h0E-wu-3vO"/>
+                                    <barButtonItem width="16" style="plain" systemItem="fixedSpace" id="h0E-wu-3vO"/>
                                     <barButtonItem title="Item" style="plain" id="lmT-MO-KQf">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7cT-kT-BRX">
-                                            <rect key="frame" x="26" y="11" width="51" height="22"/>
+                                            <rect key="frame" x="32" y="11" width="51" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="BTN_NaviBar_Back_NML.png"/>
                                             <connections>
@@ -192,9 +193,9 @@
                                             </connections>
                                         </button>
                                     </barButtonItem>
-                                    <barButtonItem width="80" style="plain" systemItem="fixedSpace" id="jww-lC-jhy"/>
+                                    <barButtonItem width="70" style="plain" systemItem="fixedSpace" id="jww-lC-jhy"/>
                                     <barButtonItem title="Dash Cam" id="lh7-hF-Mkb"/>
-                                    <barButtonItem width="55" style="plain" systemItem="fixedSpace" id="qn4-Vj-vdL"/>
+                                    <barButtonItem width="65" style="plain" systemItem="fixedSpace" id="qn4-Vj-vdL"/>
                                     <barButtonItem image="BTN_Gallery_EventShare_NML.png" id="GsG-xb-fa3">
                                         <connections>
                                             <action selector="shareButtonPressed:" destination="bJ3-kM-aHh" id="Ty4-ye-hrx"/>
@@ -202,7 +203,7 @@
                                     </barButtonItem>
                                     <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="dPT-uv-Hg8"/>
                                     <barButtonItem image="BTN_NaviBar_Hamburger_NML.png" id="RdI-XS-JLy"/>
-                                    <barButtonItem style="plain" systemItem="fixedSpace" id="av4-DP-Wvy"/>
+                                    <barButtonItem width="3" style="plain" systemItem="fixedSpace" id="av4-DP-Wvy"/>
                                 </items>
                             </toolbar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AZ2-Of-VTy">
@@ -292,7 +293,8 @@
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYQ-w3-CZu">
                                                         <rect key="frame" x="13" y="29" width="348" height="47"/>
-                                                        <string key="text">Maximum recording time is reduced with increased recording fidelity.</string>
+                                                        <string key="text">Maximum recording time is reduced with increased 
+recording fidelity.</string>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
@@ -444,7 +446,10 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xQ-Vf-6eY">
                                                 <rect key="frame" x="14" y="58" width="360" height="153"/>
-                                                <string key="text">Set sensor sensitivity value using slider or inpur field. Ifsensitivity is high, it will allow the device to sense impact easily. If sensitivity is too low, it is harder to detect impact.Set and adjust sensitivity value for Left/Right direction (horizontal shaft). As the value increases, it is harder to detect an impact from Left/Right direction.</string>
+                                                <string key="text">Set sensor sensitivity value using slider or inpur field. If
+sensitivity is high, it will allow the device to sense impact easily. If sensitivity is too low, it is harder to detect impact.
+
+Set and adjust sensitivity value for Left/Right direction (horizontal shaft). As the value increases, it is harder to detect an impact from Left/Right direction.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -641,7 +646,6 @@
         <!--Navigation View Controller-->
         <scene sceneID="J6q-oH-W0T">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KQS-lH-bOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="eVl-Cv-Pam" customClass="DCNavigationViewController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8wy-CH-1QD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -651,6 +655,7 @@
                         <segue destination="TWX-EN-NPO" kind="relationship" relationship="rootViewController" id="7GJ-EC-YK8"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KQS-lH-bOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="162" y="350"/>
         </scene>
