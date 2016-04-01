@@ -15,7 +15,7 @@
 @interface HamMenuViewController () {
     NSMutableArray *tableData;
 }
-
+@property (nonatomic, strong) SettingsViewController *settingsVC;
 @end
 
 @implementation HamMenuViewController
@@ -96,8 +96,11 @@
     }
     
     if (indexPath.row == 3) {
-        SettingsViewController *settingsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsVCID"];
-        [self.navigationController pushViewController:settingsVC animated:YES];
+        if (!self.settingsVC ) {
+            self.settingsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsVCID"];
+//            self.settingsVC = [SettingsViewController sharedInstance];
+        }
+        [self.navigationController pushViewController:self.settingsVC animated:YES];
     }
 }
 

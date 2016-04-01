@@ -67,6 +67,7 @@
 		06A0475F1CAB6FB700CA12FE /* VideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A0475E1CAB6FB700CA12FE /* VideoCollectionViewCell.m */; };
 		06A047621CAC4BA300CA12FE /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A047611CAC4BA300CA12FE /* SettingsViewController.m */; };
 		06A047651CAC689A00CA12FE /* TimeZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A047641CAC689A00CA12FE /* TimeZoneViewController.m */; };
+		06A0476A1CACB8F400CA12FE /* DashCamActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A047691CACB8F400CA12FE /* DashCamActivityViewController.m */; };
 		06C79D651C90A2DD0043926E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C79D641C90A2DD0043926E /* SystemConfiguration.framework */; };
 		06C79D6A1C90AA170043926E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79D691C90AA170043926E /* Reachability.m */; };
 		06C79D6E1C90D86A0043926E /* SDCardConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C79D6C1C90D86A0043926E /* SDCardConnectionViewController.m */; };
@@ -224,6 +225,8 @@
 		06A047631CAC689A00CA12FE /* TimeZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeZoneViewController.h; sourceTree = "<group>"; };
 		06A047641CAC689A00CA12FE /* TimeZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeZoneViewController.m; sourceTree = "<group>"; };
 		06A047661CAC78DE00CA12FE /* timezoneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timezoneDelegate.h; sourceTree = "<group>"; };
+		06A047681CACB8F400CA12FE /* DashCamActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashCamActivityViewController.h; sourceTree = "<group>"; };
+		06A047691CACB8F400CA12FE /* DashCamActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashCamActivityViewController.m; sourceTree = "<group>"; };
 		06C79D641C90A2DD0043926E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		06C79D681C90AA170043926E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		06C79D691C90AA170043926E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -401,6 +404,7 @@
 		062021631C8E33FA00A04034 /* DC PC Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				06A047671CAC807700CA12FE /* Delegates */,
 				06975AB61C8F913300139433 /* Assets */,
 				0620219F1C8E369500A04034 /* ViewControllers */,
 				062021671C8E33FA00A04034 /* AppDelegate.h */,
@@ -415,7 +419,6 @@
 				06A046E61CA5B37F00CA12FE /* MapVideoView.m */,
 				06A046FA1CAA175200CA12FE /* VideoFrameCollectionViewCell.h */,
 				06A046FB1CAA175200CA12FE /* VideoFrameCollectionViewCell.m */,
-				06A047661CAC78DE00CA12FE /* timezoneDelegate.h */,
 			);
 			path = "DC PC Viewer";
 			sourceTree = "<group>";
@@ -426,6 +429,8 @@
 				06A0475D1CAB6FB700CA12FE /* VideoCollectionViewCell.h */,
 				06A0475E1CAB6FB700CA12FE /* VideoCollectionViewCell.m */,
 				062021651C8E33FA00A04034 /* main.m */,
+				06A047681CACB8F400CA12FE /* DashCamActivityViewController.h */,
+				06A047691CACB8F400CA12FE /* DashCamActivityViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -559,6 +564,14 @@
 				06A046B51CA4B09C00CA12FE /* ONS_007.png */,
 			);
 			path = Comps;
+			sourceTree = "<group>";
+		};
+		06A047671CAC807700CA12FE /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				06A047661CAC78DE00CA12FE /* timezoneDelegate.h */,
+			);
+			name = Delegates;
 			sourceTree = "<group>";
 		};
 		06C79D661C90A9DF0043926E /* Libraries */ = {
@@ -967,6 +980,7 @@
 				06C79E141C910C1B0043926E /* DGActivityIndicatorBallClipRotateAnimation.m in Sources */,
 				06C79E331C910C1B0043926E /* DGActivityIndicatorTwoDotsAnimation.m in Sources */,
 				06C79E191C910C1B0043926E /* DGActivityIndicatorBallPulseAnimation.m in Sources */,
+				06A0476A1CACB8F400CA12FE /* DashCamActivityViewController.m in Sources */,
 				06A0475F1CAB6FB700CA12FE /* VideoCollectionViewCell.m in Sources */,
 				06C79E991C9342840043926E /* CEPortalAnimationController.m in Sources */,
 				06C79E251C910C1B0043926E /* DGActivityIndicatorDoubleBounceAnimation.m in Sources */,

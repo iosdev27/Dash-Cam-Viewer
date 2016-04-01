@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import <MapKit/MKAnnotation.h>
 #import "SWRevealViewController.h"
+#import "DashCamActivityViewController.h"
 
 
 @interface MapAndVideoViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>

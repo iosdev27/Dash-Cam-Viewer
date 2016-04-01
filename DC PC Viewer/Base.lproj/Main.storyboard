@@ -578,14 +578,9 @@
                                     <barButtonItem width="137" style="plain" systemItem="fixedSpace" id="SdE-mm-pTn"/>
                                     <barButtonItem title="Dash Cam" id="NRN-vI-Rt7"/>
                                     <barButtonItem width="55" style="plain" systemItem="fixedSpace" id="2qW-it-qq1"/>
-                                    <barButtonItem tag="2" image="BTN_NaviBar_Gallery_NML.png" id="cgk-Np-sxZ">
+                                    <barButtonItem tag="2" title=" " id="cgk-Np-sxZ">
                                         <connections>
                                             <action selector="galleryViewBarButtonItem:" destination="ggK-kr-t4S" id="oUt-2E-mUi"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem tag="3" image="BNT_NaviBar_List_NML.png" id="qM8-4u-g4g">
-                                        <connections>
-                                            <action selector="listBTNClicked:" destination="ggK-kr-t4S" id="88Q-7N-w0j"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="r4v-Hp-b0h"/>
@@ -612,7 +607,6 @@
                         <outlet property="allVideosTableView" destination="xVn-SD-f7l" id="D02-Ce-YbA"/>
                         <outlet property="galleryBarButtonItem" destination="cgk-Np-sxZ" id="UxY-jZ-ekv"/>
                         <outlet property="galleryCollectionView" destination="r2N-TA-0dx" id="ylk-H3-bAo"/>
-                        <outlet property="listBarButtonItem" destination="qM8-4u-g4g" id="meX-3q-KWy"/>
                         <outlet property="localToolBar" destination="4cJ-sa-Nja" id="R0S-T9-wYz"/>
                         <outlet property="menuBarButtonItem" destination="Foa-pk-4qJ" id="vKQ-5w-kPJ"/>
                     </connections>
@@ -769,7 +763,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BNT_NaviBar_List_NML.png" width="22" height="21"/>
         <image name="BTN_Gallery_EventShare_NML.png" width="19" height="26"/>
         <image name="BTN_NaviBar_Back_NML.png" width="51" height="16"/>
         <image name="BTN_NaviBar_Gallery_NML.png" width="22" height="22"/>

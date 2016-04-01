@@ -230,16 +230,19 @@
     
     NSArray *objectsToShare = @[videoURL];
     
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+//    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+//    
+//    NSArray *excludeActivities = @[UIActivityTypeAirDrop,
+//                                   UIActivityTypePrint,
+//                                   UIActivityTypeAssignToContact,
+//                                   UIActivityTypeAddToReadingList,
+//                                   UIActivityTypePostToFlickr,
+//                                   UIActivityTypePostToVimeo];
+//    
+//    activityVC.excludedActivityTypes = excludeActivities;
     
-    NSArray *excludeActivities = @[UIActivityTypeAirDrop,
-                                   UIActivityTypePrint,
-                                   UIActivityTypeAssignToContact,
-                                   UIActivityTypeAddToReadingList,
-                                   UIActivityTypePostToFlickr,
-                                   UIActivityTypePostToVimeo];
-    
-    activityVC.excludedActivityTypes = excludeActivities;
+    DashCamActivityViewController *dcActivity = [[DashCamActivityViewController alloc]init];
+    UIActivityViewController *activityVC = [dcActivity getActivityViewController];
     
     [self presentViewController:activityVC animated:YES completion:nil];
 }

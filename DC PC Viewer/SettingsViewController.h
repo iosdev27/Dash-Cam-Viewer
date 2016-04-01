@@ -17,5 +17,6 @@
 - (IBAction)cancelButtonPressed:(id)sender;
 - (IBAction)doneButtonPressed:(id)sender;
 - (IBAction)timezoneButtonPressed:(id)sender;
++ (id)sharedInstance;
 
 @end

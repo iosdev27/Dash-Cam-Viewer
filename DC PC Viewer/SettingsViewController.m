@@ -26,6 +26,15 @@
     // Dispose of any resources that can be recreated.
 }
 
++ (id)sharedInstance {
+    static SettingsViewController *currentSettingsViewController = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        currentSettingsViewController = [[self alloc] init];
+    });
+    return currentSettingsViewController;
+}
+
 /*
 #pragma mark - Navigation
 
