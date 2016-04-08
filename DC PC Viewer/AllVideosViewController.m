@@ -10,16 +10,22 @@
 
 
 
-@interface AllVideosViewController ()
-
-
+@interface AllVideosViewController (){
+    NSMutableArray *tripsArray;
+    NSMutableArray *advModeCollectionsArray;
+    NSMutableArray *allVideosArray;
+    NSMutableDictionary *chaptersDictionary;
+    NSMutableDictionary *eventsDictionary;
+    NSMutableDictionary *advModeEventsDictionary;
+}
 @end
 
-@implementation AllVideosViewController
+@implementation AllVideosViewController {
+    AllVideosDataModel *dataModel;
+}
 
 BOOL GalleryButtonDisplayed = YES;
 BOOL ListButtonDisplayed = NO;
-
 BOOL GalleryBTNView = YES;
 
 @synthesize allVideosTableView;
@@ -36,7 +42,6 @@ BOOL GalleryBTNView = YES;
     UICollectionViewCell *uvc = [collectionView dequeueReusableCellWithReuseIdentifier:@"VideoCell" forIndexPath:indexPath];
     uvc.backgroundColor = [UIColor whiteColor];
     
-    // UIImageView *thumbnailImageForCell = [[UIImageView alloc]initWithFrame:CGRectMake(15,7,78,56)];
     UIImageView *thumbnailImageForCell = [[UIImageView alloc]init];
     thumbnailImageForCell.image = [UIImage imageNamed:@"IMG_ Play Chapter_ThisChapterScreenshot.png"];
     
@@ -73,16 +78,6 @@ BOOL GalleryBTNView = YES;
 
     // Do any additional setup after loading the view from its nib.
     self.navigationController.navigationBar.hidden = YES;
-    
-    SWRevealViewController *revealViewController = self.revealViewController;
-    
-//    if (revealViewController) {
-//        [self.menuBarButtonItem setTarget:self.revealViewController];
-//        [self.menuBarButtonItem setAction:@selector(rightRevealToggle:)];
-//        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-//        
-//        
-//    }
     
     allVideosTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     allVideosTableView.delegate = self;
@@ -146,13 +141,15 @@ BOOL GalleryBTNView = YES;
     UIBarButtonItem *barButtonItem2 = [[UIBarButtonItem alloc] initWithCustomView:button2];
   
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-
     
     [BarbuttonsArray addObject:barButtonItem2];
     
     //Dash Cam Label
-    
     [myToolbar setItems:BarbuttonsArray];
+    
+    //Data Model
+    dataModel = [AllVideosDataModel sharedInstance];
+    NSLog(@"Total videos count: %lu", (unsigned long)[dataModel.allVideosArray count]);
 }
 
 
@@ -185,28 +182,55 @@ BOOL GalleryBTNView = YES;
 //manage datasource and  delegate for submenu tableview
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 5;
+    NSDictionary *finalVideo = [dataModel.allVideosArray objectAtIndex:([dataModel.allVideosArray count] - 1)];
+    int tripCount = [(NSString *)[finalVideo valueForKey:@"tripID"]intValue];
+
+    return tripCount;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    int itemcounter = 0;
+    
+    for (NSDictionary *dict in dataModel.allVideosArray) {
+        if ([(NSString *)[dict valueForKey:@"tripID"] intValue] == (section + 1)) {
+            itemcounter++;
+        }
+    }
+
     //    return [_collapsedSections containsObject:@(section)] ? 0 : 2;
-    return 5;
+    return itemcounter;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *dict;
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCell"];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MyCell"];
     }
+    
+    if (indexPath.section == 1) {
+        NSInteger numberOfRowsInSection = [tableView numberOfRowsInSection:0];
+        dict = [dataModel.allVideosArray objectAtIndex:numberOfRowsInSection + indexPath.row];
+        NSString *thumbnailImageNameFromDict = (NSString *)[UIImage imageNamed:[dict valueForKey:@"thumbnail"]];
+        if ([thumbnailImageNameFromDict isEqualToString:@"None"]) {
+            NSLog(@"No Image");
+        } else {
+            NSLog(@"Image name :%@", [dict valueForKey:@"thumbnail"]);
+            UIImage *thmbImage = [UIImage imageNamed:[dict valueForKey:@"thumbnail"]];
+            //        cell.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
+            UIImageView *thumbnailImageForCell = [[UIImageView alloc]initWithFrame:CGRectMake(15,7,78,56)];
+            thumbnailImageForCell.image = thmbImage;
+            
+            [cell.contentView addSubview:thumbnailImageForCell];
+        }
+    }
+    
     cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LIST_Chpt_NML.png"]];
     
-    UIImageView *thumbnailImageForCell = [[UIImageView alloc]initWithFrame:CGRectMake(15,7,78,56)];
-    thumbnailImageForCell.image = [UIImage imageNamed:@"SAMPLE_Thumbnail4List@2x.png"];
-    
-    [cell.contentView addSubview:thumbnailImageForCell];
+//    thumbnailImageForCell.image = [UIImage imageNamed:@"SAMPLE_Thumbnail4List@2x.png"];
     
     return cell;
 }
@@ -236,8 +260,7 @@ BOOL GalleryBTNView = YES;
     [result setTitle:[NSString stringWithFormat:@"Section %ld", (long)section] forState:UIControlStateNormal];
     result.tag = section;
     [result setBackgroundImage:[UIImage imageNamed:@"LIST_Trip_NML.png"] forState:UIControlStateNormal];
-    
-    //    [self sectionButtonTouchUpInside:result];
+
     return result;
 }
 

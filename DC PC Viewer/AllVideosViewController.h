@@ -11,6 +11,7 @@
 #import "Reachability.h"
 #import "MapAndVideoViewController.h"
 #import "STCollapseTableView.h"
+#import "AllVideosDataModel.h"
 
 @interface AllVideosViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> {
 
