@@ -5,7 +5,7 @@
 //  Created by Vin Chopra on 3/7/16.
 //  Copyright © 2016 Vin Chopra. All rights reserved.
 //
-
+#define MY_CUSTOM_TAG 1234
 #import "AllVideosViewController.h"
 
 
@@ -22,6 +22,9 @@
 
 @implementation AllVideosViewController {
     AllVideosDataModel *dataModel;
+    int numOfSections;
+    NSMutableArray *numberOfRowsInSectionArray;
+    int runningRowCount;
 }
 
 BOOL GalleryButtonDisplayed = YES;
@@ -73,6 +76,22 @@ BOOL GalleryBTNView = YES;
     }
 }
 
+- (void)fillNumberOfRowsInSectionArray {
+    numberOfRowsInSectionArray = [[NSMutableArray alloc]  init];
+    
+    for (int i=0; i<numOfSections; i++) {
+        NSMutableDictionary *dictnariesForEachSection = [[NSMutableDictionary alloc] init];
+        int itemCounter = 0;
+        for (NSDictionary *dict in dataModel.allVideosArray) {
+            if ([(NSString *)[dict valueForKey:@"tripID"] intValue] == (i + 1)) {
+                itemCounter++;
+            }
+        }
+        [dictnariesForEachSection setObject:[NSNumber numberWithInteger:itemCounter]  forKey:[NSString stringWithFormat:@"%d", i]];
+        [numberOfRowsInSectionArray addObject:dictnariesForEachSection];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -85,6 +104,8 @@ BOOL GalleryBTNView = YES;
     [allVideosTableView openSection:0 animated:NO];
     
     self.galleryCollectionView.hidden = YES;
+    runningRowCount = 0;
+    
     
     //Tool Bar setup
     self.localToolBar.hidden = YES;
@@ -184,6 +205,9 @@ BOOL GalleryBTNView = YES;
 {
     NSDictionary *finalVideo = [dataModel.allVideosArray objectAtIndex:([dataModel.allVideosArray count] - 1)];
     int tripCount = [(NSString *)[finalVideo valueForKey:@"tripID"]intValue];
+    
+    numOfSections = tripCount;
+    [self fillNumberOfRowsInSectionArray];
 
     return tripCount;
 }
@@ -191,13 +215,12 @@ BOOL GalleryBTNView = YES;
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     int itemcounter = 0;
-    
+
     for (NSDictionary *dict in dataModel.allVideosArray) {
         if ([(NSString *)[dict valueForKey:@"tripID"] intValue] == (section + 1)) {
             itemcounter++;
         }
     }
-
     //    return [_collapsedSections containsObject:@(section)] ? 0 : 2;
     return itemcounter;
 }
@@ -210,26 +233,83 @@ BOOL GalleryBTNView = YES;
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MyCell"];
     }
-    
-    if (indexPath.section == 1) {
-        NSInteger numberOfRowsInSection = [tableView numberOfRowsInSection:0];
-        dict = [dataModel.allVideosArray objectAtIndex:numberOfRowsInSection + indexPath.row];
-        NSString *thumbnailImageNameFromDict = (NSString *)[UIImage imageNamed:[dict valueForKey:@"thumbnail"]];
-        if ([thumbnailImageNameFromDict isEqualToString:@"None"]) {
-            NSLog(@"No Image");
-        } else {
-            NSLog(@"Image name :%@", [dict valueForKey:@"thumbnail"]);
-            UIImage *thmbImage = [UIImage imageNamed:[dict valueForKey:@"thumbnail"]];
-            //        cell.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
-            UIImageView *thumbnailImageForCell = [[UIImageView alloc]initWithFrame:CGRectMake(15,7,78,56)];
-            thumbnailImageForCell.image = thmbImage;
-            
-            [cell.contentView addSubview:thumbnailImageForCell];
-        }
+//    cell.imageView.image = nil;
+//    cell.backgroundView = nil;
+    [[cell.contentView viewWithTag:MY_CUSTOM_TAG]removeFromSuperview] ;
+
+    for (NSDictionary *dict1 in numberOfRowsInSectionArray) {
+        NSLog(@"numberOfRowsInSection count: %lu", (unsigned long)[numberOfRowsInSectionArray count]);
+        NSLog(@"Number of rows in section: %ld are %@:", (long)indexPath.section, [dict1 objectForKey:[NSString stringWithFormat:@"%ld", (long)indexPath.section]]);
     }
     
-    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LIST_Chpt_NML.png"]];
     
+    if (indexPath.section == 0) {
+        dict = [dataModel.allVideosArray objectAtIndex:indexPath.row];
+        cell.textLabel.text = [dict valueForKey:@"time"];
+    } else if (indexPath.section > 0) {
+        if (indexPath.section > 1) {
+            if (runningRowCount == 0) {
+                int count = 1;
+                while (count < numOfSections) {
+                    NSDictionary *rowDict = [numberOfRowsInSectionArray objectAtIndex:indexPath.section-count];
+                    NSLog(@"indexPath.section :%ld, i:%d", (long)indexPath.section, count);
+                    
+                    NSNumber *rowIndex = [rowDict valueForKey:[NSString stringWithFormat:@"%ld", (long)indexPath.section-count]];
+                    runningRowCount += [rowIndex intValue];
+                    count++;
+                }
+            }
+            dict = [dataModel.allVideosArray objectAtIndex:runningRowCount + indexPath.row];
+            cell.textLabel.text = [dict valueForKey:@"time"];
+            if ([dict valueForKey:@"thumbnail"]) {
+                UIImageView *thumbnailImageViewForCell = [[UIImageView alloc]initWithFrame:CGRectMake(15,7,78,200)];
+                UIImage *thumbnailImage = [UIImage imageNamed:[dict valueForKey:@"thumbnail"]];
+                thumbnailImageViewForCell.image = thumbnailImage;
+                thumbnailImageViewForCell.tag = MY_CUSTOM_TAG;
+                [cell.contentView addSubview:thumbnailImageViewForCell];
+                
+//                cell.imageView.image = thumbnailImage;
+//                cell.backgroundView = thumbnailImageViewForCell;
+            }
+        } else if (indexPath.section == 1) {
+            NSDictionary *rowDict = [numberOfRowsInSectionArray objectAtIndex:indexPath.section-1];
+
+            NSNumber *rowIndex = [rowDict valueForKey:[NSString stringWithFormat:@"%ld", (long)indexPath.section-1]];
+            dict = [dataModel.allVideosArray objectAtIndex:[rowIndex intValue] + indexPath.row];
+            cell.textLabel.text = [dict valueForKey:@"time"];
+            
+            if ([dict valueForKey:@"thumbnail"]) {
+                UIImageView *thumbnailImageViewForCell = [[UIImageView alloc]initWithFrame:CGRectMake(15,7,78,200)];
+                UIImage *thumbnailImage = [UIImage imageNamed:[dict valueForKey:@"thumbnail"]];
+                thumbnailImageViewForCell.image = thumbnailImage;
+                thumbnailImageViewForCell.tag = MY_CUSTOM_TAG;
+                [cell.contentView addSubview:thumbnailImageViewForCell];
+//                cell.imageView.image = thumbnailImage;
+//                cell.backgroundView = thumbnailImageViewForCell;
+            }
+        }
+    }
+
+    
+//    if (indexPath.section == 1) {
+////        NSInteger numberOfRowsInSection = [tableView numberOfRowsInSection:0];
+//        dict = [dataModel.allVideosArray objectAtIndex:40 + indexp];
+//        UIImage *thumbnailImageNameFromDict = [UIImage imageNamed:[dict valueForKey:@"thumbnail"]];
+//        if (!thumbnailImageNameFromDict) {
+//            NSLog(@"No Image");
+//        } else {
+//            NSLog(@"Image name :%@", [dict valueForKey:@"thumbnail"]);
+//            UIImage *thmbImage = [UIImage imageNamed:[dict valueForKey:@"thumbnail"]];
+//            //        cell.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
+//            UIImageView *thumbnailImageForCell = [[UIImageView alloc]initWithFrame:CGRectMake(15,7,78,56)];
+//            thumbnailImageForCell.image = thmbImage;
+//            
+//            [cell.contentView addSubview:thumbnailImageForCell];
+//        }
+//    }
+    
+//    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LIST_Chpt_NML.png"]];
+
 //    thumbnailImageForCell.image = [UIImage imageNamed:@"SAMPLE_Thumbnail4List@2x.png"];
     
     return cell;
